@@ -1,0 +1,7333 @@
+/* ==========================================================
+   Angie 劉泀嗪
+   Visual Identity V4.8
+
+   Forest Green × Dusty Pink
+   Editorial / Literary / Contemporary
+   ========================================================== */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap');
+
+/* ==========================================================
+   01. Color System
+   ========================================================== */
+:root {
+
+  /* Paper / text */
+  --angie-paper: #f2eee7;
+  --angie-paper-deep: #e9e4dc;
+  --angie-card: #f8f5ef;
+
+  --angie-charcoal: #292b29;
+  --angie-grey: #74736f;
+
+  /* New palette */
+  --angie-line: #cac6bd;
+
+  --angie-green: #979d6e;
+  --angie-chapter: rgba(151, 157, 110, 0.82);
+  --angie-green-dark: #687047;
+  --angie-green-soft: #cac6bd;
+  --angie-green-pale: #eeede8;
+
+  --angie-accent: #bb9a88;
+  --angie-accent-dark: #916f60;
+  --angie-accent-pale: #e8dfda;
+
+  --angie-muted: #b5a8a0;
+
+/* Global Chinese typeface */
+--angie-font-zh:
+  "Microsoft JhengHei",
+  "Microsoft JhengHei UI",
+  "PingFang TC",
+  "Heiti TC",
+  "Noto Sans TC",
+  sans-serif;
+
+}
+
+/* ==========================================================
+   02. Base
+   ========================================================== */
+html,
+body,
+#wrapper,
+#main,
+#main > .inner {
+  background-color: var(--angie-paper);
+}
+
+body {
+  color: var(--angie-charcoal);
+  font-family: var(--angie-font-zh);
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+}
+
+#main > .inner {
+  max-width: 82em;
+  padding-top: 0;
+}
+
+p {
+  color: var(--angie-charcoal);
+}
+
+/* ==========================================================
+   03. Text Selection
+   ========================================================== */
+::selection {
+  background: var(--angie-accent);
+  color: var(--angie-charcoal);
+}
+
+::-moz-selection {
+  background: var(--angie-accent);
+  color: var(--angie-charcoal);
+}
+
+/* ==========================================================
+   04. Typography
+   Chinese: Microsoft JhengHei / PingFang TC / Noto Sans TC
+   English editorial labels retain their dedicated styles.
+   ========================================================== */
+h1,
+h2 {
+  font-family: var(--angie-font-zh);
+  color: var(--angie-charcoal);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--angie-font-zh);
+  color: var(--angie-charcoal);
+}
+
+.name-zh,
+.sidebar-name-zh {
+  font-family: var(--angie-font-zh) !important;
+  font-weight: 500;
+}
+
+.name-en,
+.sidebar-name-en {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+}
+
+/* ==========================================================
+   05. Links
+   ========================================================== */
+a {
+  color: var(--angie-green-dark);
+  border-bottom-color: rgba(151, 157, 110, 0.35);
+}
+
+a:hover {
+  color: var(--angie-accent-dark) !important;
+  border-bottom-color: var(--angie-accent);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: solid 2px var(--angie-accent);
+  outline-offset: 3px;
+}
+
+/* ==========================================================
+   06. Sidebar
+   ========================================================== */
+#sidebar {
+  background: var(--angie-paper-deep);
+}
+
+#sidebar > .inner {
+  background: transparent;
+}
+
+.sidebar-brand {
+  padding: 3.4em 0 2.8em;
+  border-bottom: solid 1px var(--angie-line);
+}
+
+.sidebar-brand a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45em;
+  border: 0;
+  color: var(--angie-charcoal);
+}
+
+.sidebar-name-en {
+  font-size: 2em;
+  line-height: 1;
+  color: var(--angie-green-dark);
+}
+
+.sidebar-name-zh {
+  font-size: 1.05em;
+  letter-spacing: 0.08em;
+}
+
+#menu {
+  border: 0;
+  margin: 0;
+  padding: 2.4em 0;
+}
+
+#menu > ul {
+  margin: 0;
+}
+
+#menu ul a {
+  border: 0;
+  color: var(--angie-charcoal);
+  font-family: var(--angie-font-zh);
+  font-size: 0.92em;
+  font-weight: 400;
+  letter-spacing: 0.09em;
+  padding: 0.72em 0;
+  text-transform: none;
+}
+
+#menu ul a:hover {
+  color: var(--angie-accent-dark) !important;
+  padding-left: 0.35em;
+}
+
+#menu ul > li {
+  border: 0;
+}
+
+#menu .sidebar-menu-space {
+  margin-top: 1.8em;
+  padding-top: 1.8em;
+  border-top: solid 1px var(--angie-line);
+}
+
+.sidebar-note {
+  border-top: solid 1px var(--angie-line);
+  padding-top: 2em;
+  margin-top: 0;
+}
+
+.sidebar-note p {
+  font-size: 0.82em;
+  line-height: 1.8;
+}
+
+.sidebar-location {
+  font-family: var(--angie-font-zh);
+  color: var(--angie-green-dark);
+  letter-spacing: 0.06em;
+}
+
+.sidebar-contact-link {
+  font-family: var(--angie-font-zh);
+  font-size: 0.92em;
+  border: 0;
+}
+
+#footer {
+  border-top: solid 1px var(--angie-line);
+  margin-top: 2.5em;
+  padding-top: 2em;
+}
+
+#footer .copyright {
+  color: var(--angie-grey);
+  font-size: 0.68em;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   07. Homepage Hero
+   ========================================================== */
+.home-hero {
+  border-bottom: solid 1px var(--angie-line);
+  padding: 4em 0 5.5em;
+}
+
+.home-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6em;
+  padding-bottom: 1em;
+  border-bottom: solid 1px var(--angie-line);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.72em;
+  letter-spacing: 0.16em;
+  color: var(--angie-grey);
+  text-transform: uppercase;
+}
+
+.home-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(19em, 0.88fr) minmax(27em, 1.12fr);
+  gap: 7.5em;
+  align-items: start;
+}
+
+.home-eyebrow {
+  margin: 0 0 1.2em;
+  color: var(--angie-green);
+  font-family: var(--angie-font-zh);
+  font-size: 1.02em;
+  letter-spacing: 0.12em;
+}
+
+.home-name {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.home-name .name-en {
+  display: block;
+  font-family: "Allura", cursive;
+  font-size: 6.2rem;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--angie-green-dark);
+  line-height: 0.9;
+  letter-spacing: 0;
+}
+
+.home-name .name-zh {
+  display: block;
+  margin-top: 0.4em;
+  font-family: var(--angie-font-zh) !important;
+  font-size: 2.3rem;
+  font-weight: 500;
+  color: var(--angie-charcoal);
+  letter-spacing: 0.12em;
+}
+
+.home-disciplines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55em;
+  margin: 2.4em 0 0;
+  font-family: var(--angie-font-zh);
+  font-size: 0.9em;
+  letter-spacing: 0.08em;
+}
+
+.home-disciplines a {
+  border: 0;
+  color: var(--angie-charcoal);
+}
+
+.home-disciplines a:hover {
+  color: var(--angie-accent-dark) !important;
+}
+
+.home-disciplines span {
+  color: var(--angie-green-soft);
+}
+
+.home-intro {
+  padding-top: 1.4em;
+  max-width: 35.5em;
+  justify-self: end;
+}
+
+.home-intro p {
+  font-size: 1.04em;
+  line-height: 2.05;
+  margin-bottom: 1.7em;
+}
+
+.home-intro-link {
+  margin-top: 2.5em;
+}
+
+.editorial-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.1em;
+  border: 0;
+  font-family: var(--angie-font-zh);
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--angie-green-dark);
+}
+
+.editorial-link span {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.editorial-link:hover {
+  color: var(--angie-accent-dark) !important;
+}
+
+.editorial-link:hover span {
+  transform: translate(0.3em, -0.15em);
+  color: var(--angie-accent);
+}
+
+/* ==========================================================
+   08. Homepage Sections
+   ========================================================== */
+.home-fields,
+.home-explore {
+  padding: 6.5em 0;
+  border-bottom: solid 1px var(--angie-line);
+}
+
+/* ==========================================================
+   09. Editorial Chapter Heading
+   ========================================================== */
+.home-section-heading {
+  --chapter-width: 24em;
+  position: relative;
+  display: grid;
+  grid-template-columns: 6.7em 1fr;
+  align-items: center;
+  gap: 1.25em;
+  width: 100%;
+  min-height: 8.8em;
+  box-sizing: border-box;
+  margin-bottom: 4.5em;
+  padding: 1.35em 1.7em;
+  background: transparent;
+  overflow: visible;
+}
+
+.home-section-heading::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: var(--chapter-width);
+  height: 100%;
+  background: var(--angie-chapter);
+  clip-path: polygon(0 0, calc(100% - 0.8em) 0, 100% 0.8em, 100% 100%, 0 100%);
+}
+
+.home-section-heading::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: var(--chapter-width);
+  right: 0;
+  top: 50%;
+  height: 6px;
+  transform: translateY(-50%);
+  background:
+    radial-gradient(circle at right center, var(--angie-accent) 0, var(--angie-accent) 2px, transparent 2.5px),
+    linear-gradient(var(--angie-green), var(--angie-green));
+  background-repeat: no-repeat, no-repeat;
+  background-position: right center, left center;
+  background-size: 6px 6px, 100% 1px;
+  pointer-events: none;
+}
+
+.home-section-heading > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section-number {
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Serif TC", Georgia, serif;
+  color: rgba(247, 243, 236, 0.27);
+  font-size: 5.2em;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+
+.section-label {
+  margin: 0 0 0.45em;
+  color: rgba(247, 243, 236, 0.9);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.68em;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  line-height: 1.4;
+}
+
+.home-section-heading h2 {
+  margin: 0;
+  color: var(--angie-paper);
+  font-family: var(--angie-font-zh);
+  font-size: 1.85em;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+}
+
+.section-heading-text {
+  min-width: 0;
+}
+
+/* ==========================================================
+   10. WHAT I DO — Editorial Grid
+   ========================================================== */
+.practice-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2.3em;
+  align-items: stretch;
+}
+
+.practice-editorial-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 21.5em;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1.8em 1.55em 1.6em;
+  border: 0;
+  color: var(--angie-charcoal);
+  background: transparent;
+  text-decoration: none;
+  transition: transform 0.22s ease, background-color 0.22s ease, color 0.22s ease;
+}
+
+.practice-outline {
+  border: solid 1px rgba(151, 157, 110, 0.34);
+  clip-path: polygon(0.75em 0, calc(100% - 0.75em) 0, 100% 0.75em, 100% 100%, 0 100%, 0 0.75em);
+}
+
+.practice-plain,
+.practice-soft {
+  padding-top: 1.8em;
+}
+
+.practice-soft {
+  background: rgba(202, 198, 189, 0.28);
+}
+
+.practice-warm {
+  background: rgba(187, 154, 136, 0.16);
+}
+
+.practice-illustration {
+  margin-top: 0;
+}
+
+.practice-number {
+  display: block;
+  margin-bottom: 1.5em;
+  color: var(--angie-accent-dark);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  transition: color 0.2s ease;
+}
+
+.practice-title {
+  margin: 0;
+}
+
+.practice-title h3 {
+  margin: 0 0 0.28em;
+  font-family: var(--angie-font-zh);
+  font-size: 1.7em;
+  font-weight: 500;
+  line-height: 1.35;
+  transition: color 0.2s ease;
+}
+
+.practice-en {
+  display: block;
+  color: var(--angie-green-dark);
+  font-family: "Noto Serif TC", Georgia, serif;
+  font-size: 0.84em;
+  font-style: italic;
+  line-height: 1.6;
+  transition: color 0.2s ease;
+}
+
+.practice-description {
+  margin: 1.7em 0 2.5em;
+  color: var(--angie-grey);
+  font-size: 0.9em;
+  line-height: 1.9;
+  transition: color 0.2s ease;
+}
+
+.practice-arrow {
+  position: relative;
+  display: block;
+  margin-top: auto;
+  padding-bottom: 0.8em;
+  color: var(--angie-green);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.15em;
+  line-height: 1;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.practice-arrow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 4.5em;
+  height: 1px;
+  background: var(--angie-green-soft);
+  transition: width 0.25s ease, background-color 0.25s ease;
+}
+
+.practice-editorial-item:hover {
+  background: var(--angie-accent);
+  color: var(--angie-charcoal) !important;
+  transform: translateY(-3px);
+}
+
+.practice-editorial-item:hover .practice-number,
+.practice-editorial-item:hover .practice-en,
+.practice-editorial-item:hover .practice-arrow {
+  color: var(--angie-green-dark);
+}
+
+.practice-editorial-item:hover .practice-title h3,
+.practice-editorial-item:hover .practice-description {
+  color: var(--angie-charcoal);
+}
+
+.practice-editorial-item:hover .practice-arrow {
+  transform: translate(0.12em, -0.08em);
+}
+
+.practice-editorial-item:hover .practice-arrow::after {
+  width: 6em;
+  background: var(--angie-green-dark);
+}
+
+.practice-outline:hover {
+  border-color: var(--angie-accent);
+}
+
+/* ==========================================================
+   11. WHO I AM — Editorial Index
+   ========================================================== */
+.explore-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  align-items: stretch;
+}
+
+.explore-editorial-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 13.5em;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1.2em 3em 1.5em 2.2em;
+  border: 0;
+  border-right: solid 1px var(--angie-line);
+  color: var(--angie-charcoal);
+  background: transparent;
+  text-decoration: none;
+  transition: transform 0.22s ease, background-color 0.22s ease, color 0.22s ease;
+}
+
+.explore-editorial-item:first-child {
+  padding-left: 0.5em;
+}
+
+.explore-editorial-item:last-child {
+  border-right: 0;
+}
+
+.explore-offset {
+  margin-top: 0;
+}
+
+.explore-kicker {
+  margin: 0 0 1.2em;
+  color: var(--angie-green);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.66em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+.explore-editorial-item h3 {
+  margin: 0;
+  padding-bottom: 0.55em;
+  border-bottom: solid 1px var(--angie-green-soft);
+  font-family: var(--angie-font-zh);
+  font-size: 1.35em;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.explore-description {
+  margin: 1.2em 0 2em;
+  max-width: 20em;
+  color: var(--angie-grey);
+  font-size: 0.88em;
+  line-height: 1.85;
+  transition: color 0.2s ease;
+}
+
+.explore-arrow {
+  display: block;
+  margin-top: auto;
+  color: var(--angie-green);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.1em;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.explore-editorial-item:hover {
+  background: var(--angie-accent);
+  color: var(--angie-charcoal) !important;
+  transform: translateY(-3px);
+}
+
+.explore-editorial-item:hover .explore-kicker,
+.explore-editorial-item:hover .explore-arrow {
+  color: var(--angie-green-dark);
+}
+
+.explore-editorial-item:hover h3 {
+  color: var(--angie-charcoal);
+  border-bottom-color: var(--angie-green-dark);
+}
+
+.explore-editorial-item:hover .explore-description {
+  color: var(--angie-charcoal);
+}
+
+.explore-editorial-item:hover .explore-arrow {
+  transform: translate(0.14em, -0.1em);
+}
+
+/* ==========================================================
+   12. General Elements
+   ========================================================== */
+hr,
+hr.major {
+  border-bottom-color: var(--angie-line);
+}
+
+header.major > :last-child {
+  border-bottom-color: var(--angie-green);
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--angie-green);
+  color: var(--angie-green-dark) !important;
+  font-family: var(--angie-font-zh);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  background: var(--angie-accent);
+  box-shadow: inset 0 0 0 1px var(--angie-accent);
+  color: var(--angie-charcoal) !important;
+}
+
+.posts article {
+  border-color: var(--angie-line);
+}
+
+/* ==========================================================
+   13. Tablet
+   ========================================================== */
+@media screen and (max-width: 1280px) {
+  .home-hero-grid { gap: 4em; }
+  .home-name .name-en { font-size: 5rem; }
+  .home-section-heading {
+    --chapter-width: 21em;
+    grid-template-columns: 5.5em 1fr;
+    min-height: 8em;
+  }
+  .section-number { font-size: 4.5em; }
+  .practice-editorial-grid { gap: 1.5em; }
+  .practice-editorial-item {
+    min-height: 20em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+  }
+  .practice-title h3 { font-size: 1.5em; }
+  .explore-editorial-item {
+    padding-right: 2em;
+    padding-left: 1.6em;
+  }
+}
+
+/* ==========================================================
+   14. Smaller Screens
+   ========================================================== */
+@media screen and (max-width: 980px) {
+  .home-topline { margin-bottom: 4em; }
+  .home-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5em;
+  }
+  .home-intro {
+    padding-top: 0;
+    max-width: 100%;
+    justify-self: start;
+  }
+  .home-section-heading {
+    --chapter-width: 19em;
+    grid-template-columns: 5em 1fr;
+    min-height: 7.5em;
+  }
+  .practice-editorial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2em 2.5em;
+    align-items: stretch;
+  }
+  .practice-editorial-item {
+    min-height: 18em;
+    height: 100%;
+  }
+  .practice-illustration { margin-top: 0; }
+  .explore-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .explore-editorial-item,
+  .explore-editorial-item:first-child {
+    min-height: auto;
+    height: auto;
+    padding: 2em 2.5em 2em 0;
+    border-right: 0;
+    border-bottom: solid 1px var(--angie-line);
+  }
+  .explore-editorial-item:last-child { border-bottom: 0; }
+  .explore-offset { margin-top: 0; }
+}
+
+/* ==========================================================
+   15. Mobile
+   ========================================================== */
+@media screen and (max-width: 736px) {
+  body {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .home-hero { padding: 2.5em 0 4em; }
+  .home-topline {
+    margin-bottom: 3em;
+    font-size: 0.65em;
+  }
+  .home-name .name-en { font-size: 4.2rem; }
+  .home-name .name-zh { font-size: 1.75rem; }
+  .home-disciplines { line-height: 2; }
+  .home-intro p {
+    font-size: 1em;
+    line-height: 1.95;
+  }
+  .home-fields,
+  .home-explore { padding: 4.5em 0; }
+ .home-section-heading {
+  --chapter-width: 100%;
+  width: 100%;
+  min-height: auto;
+  grid-template-columns: 4.2em 1fr;
+  gap: 0.8em;
+  padding: 1.35em 1.25em;
+  margin-bottom: 3em;
+  background: var(--angie-chapter);
+  overflow: hidden;
+}
+  .home-section-heading::before {
+    width: 100%;
+    clip-path: none;
+  }
+  .home-section-heading::after { display: none; }
+  .section-number { font-size: 3.4em; }
+  .home-section-heading h2 { font-size: 1.6em; }
+  .practice-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+  .practice-editorial-item,
+  .practice-plain,
+  .practice-soft,
+  .practice-illustration {
+    min-height: auto;
+    height: auto;
+    margin-top: 0;
+    padding: 1.5em 1.2em 1.4em;
+  }
+  .practice-title h3 { font-size: 1.45em; }
+  .practice-description {
+    margin: 1.2em 0 2em;
+    font-size: 0.88em;
+  }
+  .explore-editorial-item,
+  .explore-editorial-item:first-child {
+    padding: 1.8em 0;
+  }
+  .explore-editorial-item h3 { font-size: 1.25em; }
+}
+
+/* ==========================================================
+   16. Mobile Touch Interaction
+   ========================================================== */
+@media (hover: none) and (pointer: coarse) {
+  .practice-editorial-item,
+  .explore-editorial-item {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .practice-editorial-item:active {
+    background: var(--angie-accent);
+    color: var(--angie-charcoal) !important;
+    transform: translateY(-3px);
+  }
+  .practice-editorial-item:active .practice-number,
+  .practice-editorial-item:active .practice-en,
+  .practice-editorial-item:active .practice-arrow {
+    color: var(--angie-green-dark);
+  }
+  .practice-editorial-item:active .practice-title h3,
+  .practice-editorial-item:active .practice-description {
+    color: var(--angie-charcoal);
+  }
+  .practice-editorial-item:active .practice-arrow {
+    transform: translate(0.12em, -0.08em);
+  }
+  .practice-editorial-item:active .practice-arrow::after {
+    width: 6em;
+    background: var(--angie-green-dark);
+  }
+  .practice-outline:active { border-color: var(--angie-accent); }
+  .explore-editorial-item:active {
+    background: var(--angie-accent);
+    color: var(--angie-charcoal) !important;
+    transform: translateY(-3px);
+  }
+  .explore-editorial-item:active .explore-kicker,
+  .explore-editorial-item:active .explore-arrow {
+    color: var(--angie-green-dark);
+  }
+  .explore-editorial-item:active h3 {
+    color: var(--angie-charcoal);
+    border-bottom-color: var(--angie-green-dark);
+  }
+  .explore-editorial-item:active .explore-description {
+    color: var(--angie-charcoal);
+  }
+  .explore-editorial-item:active .explore-arrow {
+    transform: translate(0.14em, -0.1em);
+  }
+}
+
+/* ==========================================================
+   17. ABOUT PAGE — Editorial Margin Layout
+   ========================================================== */
+.about-page {
+  padding: 4em 0 5em;
+}
+
+.about-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5.5em;
+  padding-bottom: 1em;
+  border-bottom: solid 1px var(--angie-line);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.72em;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--angie-grey);
+}
+
+.about-topline span:first-child {
+  color: var(--angie-green-dark);
+  font-weight: 600;
+}
+
+.about-editorial-layout {
+  display: grid;
+  grid-template-columns: 4.2em minmax(0, 1fr) 18em;
+  column-gap: 3.8em;
+  align-items: start;
+}
+
+.about-rail {
+  position: relative;
+  align-self: stretch;
+  min-height: 100%;
+  border-right: solid 1px var(--angie-green-soft);
+}
+
+.about-rail-inner {
+  position: sticky;
+  top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  padding-top: 0.3em;
+}
+
+.about-rail-en,
+.about-rail-zh {
+  font-family: "Noto Sans TC", sans-serif;
+  color: var(--angie-green-dark);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.about-rail-en {
+  font-size: 0.67em;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+}
+
+.about-rail-zh {
+  font-family: var(--angie-font-zh);
+  font-size: 1.05em;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+}
+
+.about-rail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--angie-accent);
+}
+
+.about-essay {
+  min-width: 0;
+  max-width: 48em;
+}
+
+.about-essay-header {
+  margin-bottom: 3.4em;
+}
+
+.about-essay-kicker {
+  margin: 0 0 1.1em;
+  color: var(--angie-accent-dark);
+  font-family: var(--angie-font-zh);
+  font-size: 0.68em;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+}
+
+.about-essay-header h1 {
+  margin: 0;
+  font-family: var(--angie-font-zh);
+  font-size: clamp(2em, 3vw, 2.75em);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.05em;
+  color: var(--angie-charcoal);
+  white-space: nowrap;
+}
+
+.about-title-line {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  margin-top: 1.8em;
+  background: var(--angie-green-soft);
+}
+
+.about-title-line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 3.7em;
+  height: 3px;
+  background: var(--angie-accent);
+}
+
+.about-title-line::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--angie-accent);
+}
+
+.about-essay-body {
+  max-width: 44em;
+}
+
+.about-essay-body p {
+  margin: 0 0 2.2em;
+  color: var(--angie-charcoal);
+  font-family: var(--angie-font-zh);
+  font-size: 1.02em;
+  line-height: 2.15;
+  letter-spacing: 0.025em;
+}
+
+.about-essay-body p:last-child {
+  margin-bottom: 0;
+  padding-bottom: 1.5em;
+}
+
+.about-margin {
+  position: relative;
+  min-width: 0;
+  padding-left: 2.2em;
+  border-left: solid 1px var(--angie-green-soft);
+}
+
+.about-margin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--angie-green-dark);
+}
+
+.about-margin-photo {
+  position: relative;
+  margin: 0 0 3.8em;
+}
+
+.about-photo-frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--angie-paper-deep);
+  border: 0;
+}
+
+.about-photo-frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.4em;
+  height: 1.4em;
+  background: var(--angie-paper);
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+
+.about-photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.about-photo-accent {
+  position: absolute;
+  z-index: 3;
+
+  top: -0.15em;
+  right: -0.45em;
+
+  width: 2.8em;
+  height: 0.85em;
+
+  background: rgba(187, 154, 136, 0.78);
+
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
+.about-margin-section {
+  position: relative;
+  margin-bottom: 3.4em;
+}
+
+.about-margin-section::before {
+  content: "";
+  position: absolute;
+  top: 0.72em;
+  left: -2.38em;
+  width: 7px;
+  height: 7px;
+  background: var(--angie-green-dark);
+  transform: rotate(45deg);
+}
+
+.about-margin-label {
+  margin: 0 0 0.55em;
+  color: var(--angie-accent-dark);
+  font-family: var(--angie-font-zh);
+  font-size: 0.62em;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.about-margin-section h2 {
+  margin: 0;
+  color: var(--angie-green-dark);
+  font-family: var(--angie-font-zh);
+  font-size: 1.22em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.about-margin-rule {
+  width: 100%;
+  height: 1px;
+  margin: 0.7em 0 1.2em;
+  background: var(--angie-green-soft);
+}
+
+.about-location {
+  margin: 0;
+  font-family: var(--angie-font-zh);
+  font-size: 0.96em;
+  letter-spacing: 0.04em;
+}
+
+.about-language-list {
+  margin: 0;
+}
+
+.about-language-list p {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.8em;
+  align-items: baseline;
+  margin: 0 0 0.65em;
+  font-size: 0.83em;
+  line-height: 1.65;
+}
+
+.language-name {
+  color: var(--angie-charcoal);
+  font-weight: 500;
+}
+
+.language-level {
+  color: var(--angie-grey);
+  text-align: right;
+  font-size: 0.92em;
+}
+
+.about-margin-quote {
+  position: relative;
+  margin: 4em 0 0;
+  padding: 2.2em 1.5em 1.7em;
+  border: solid 1px rgba(187, 154, 136, 0.35);
+  background: rgba(181, 168, 160, 0.26);
+}
+
+.about-quote-mark {
+  position: absolute;
+  top: 0.12em;
+  left: 0.35em;
+  color: var(--angie-accent);
+  font-family: Georgia, serif;
+  font-size: 3em;
+  line-height: 1;
+}
+
+.about-margin-quote p {
+  margin: 0;
+  color: var(--angie-charcoal);
+  font-family: var(--angie-font-zh);
+  font-size: 0.9em;
+  line-height: 2;
+}
+
+.about-cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4em;
+  align-items: center;
+  margin-top: 6.5em;
+  padding: 2.8em 3em;
+  border: solid 1px rgba(151, 157, 110, 0.22);
+  background: linear-gradient(90deg, rgba(202, 198, 189, 0.38), rgba(247, 243, 236, 0.7));
+}
+
+.about-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--angie-accent);
+}
+
+.about-cta-kicker {
+  margin: 0 0 0.7em;
+  color: var(--angie-accent-dark);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.64em;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+}
+
+.about-cta-copy h2 {
+  margin: 0 0 0.4em;
+  font-family: var(--angie-font-zh);
+  font-size: 1.65em;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.about-cta-copy > p:last-child {
+  margin: 0;
+  color: var(--angie-grey);
+  font-size: 0.86em;
+}
+
+.about-cta-actions {
+  display: flex;
+  gap: 1em;
+  align-items: stretch;
+}
+
+.about-cta-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2em;
+  min-width: 10.5em;
+  box-sizing: border-box;
+  padding: 0.9em 1.5em;
+  border: solid 1px;
+  font-family: var(--angie-font-zh);
+  font-size: 0.86em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.about-cta-link span {
+  transition: transform 0.2s ease;
+}
+
+.about-cta-primary {
+  border-color: var(--angie-green);
+  color: var(--angie-green-dark);
+  background: transparent;
+}
+
+.about-cta-primary:hover {
+  background: var(--angie-green);
+  border-color: var(--angie-green);
+  color: var(--angie-paper) !important;
+}
+
+.about-cta-secondary {
+  border-color: var(--angie-accent);
+  color: var(--angie-accent-dark);
+  background: transparent;
+}
+
+.about-cta-secondary:hover {
+  background: var(--angie-accent);
+  border-color: var(--angie-accent);
+  color: var(--angie-charcoal) !important;
+}
+
+.about-cta-link:hover {
+  transform: translateY(-2px);
+}
+
+.about-cta-link:hover span {
+  transform: translate(0.18em, -0.12em);
+}
+
+/* ==========================================================
+   18. ABOUT — TABLET
+   ========================================================== */
+@media screen and (max-width: 1280px) {
+  .about-editorial-layout {
+    grid-template-columns: 3.2em minmax(0, 1fr) 15.5em;
+    column-gap: 2.5em;
+  }
+  .about-margin { padding-left: 1.7em; }
+  .about-margin-section::before { left: -1.88em; }
+  .about-essay-header h1 { font-size: 2.7em; }
+  .about-essay-body p { font-size: 0.96em; }
+  .about-language-list p {
+    grid-template-columns: 1fr;
+    gap: 0.1em;
+  }
+  .language-level { text-align: left; }
+}
+
+/* ==========================================================
+   19. ABOUT — SMALLER SCREENS
+   ========================================================== */
+@media screen and (max-width: 980px) {
+  .about-page { padding-top: 3em; }
+  .about-topline { margin-bottom: 4em; }
+  .about-editorial-layout {
+    grid-template-columns: 3em minmax(0, 1fr);
+    column-gap: 2em;
+  }
+  .about-essay { max-width: none; }
+  .about-margin {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: minmax(12em, 0.8fr) minmax(0, 1.2fr);
+    gap: 3em 2.5em;
+    margin-top: 4.5em;
+    padding: 2.5em 0 0;
+    border-left: 0;
+    border-top: solid 1px var(--angie-green-soft);
+  }
+  .about-margin::before {
+    top: -3px;
+    left: 0;
+  }
+  .about-margin-photo {
+    grid-row: 1 / span 2;
+    margin: 0;
+  }
+  .about-margin-section { margin-bottom: 0; }
+  .about-margin-section::before { display: none; }
+  .about-margin-quote {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+  .about-cta {
+    grid-template-columns: 1fr;
+    gap: 2em;
+    padding: 2.5em 2.2em;
+  }
+  .about-cta-actions { justify-content: flex-start; }
+}
+
+/* ==========================================================
+   20. ABOUT — MOBILE
+   ========================================================== */
+@media screen and (max-width: 736px) {
+  .about-page { padding: 2.5em 0 4em; }
+  .about-topline {
+    margin-bottom: 3em;
+    font-size: 0.65em;
+  }
+  .about-editorial-layout { display: block; }
+  .about-rail {
+    min-height: auto;
+    margin-bottom: 2.5em;
+    padding-bottom: 1em;
+    border-right: 0;
+    border-bottom: solid 1px var(--angie-green-soft);
+  }
+  .about-rail::before {
+    top: auto;
+    right: 0;
+    bottom: -3px;
+  }
+  .about-rail-inner {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1em;
+    padding: 0;
+  }
+  .about-rail-en,
+  .about-rail-zh { writing-mode: horizontal-tb; }
+  .about-rail-en { font-size: 0.65em; }
+  .about-rail-zh {
+    font-size: 1.05em;
+    letter-spacing: 0.12em;
+  }
+  .about-essay-header { margin-bottom: 2.5em; }
+  .about-essay-header h1 {
+    font-size: 1.55em;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .about-title-line { margin-top: 1.4em; }
+  .about-essay-body p,
+  .about-essay-body p:first-child {
+    font-size: 0.98em;
+    line-height: 2;
+    margin-bottom: 1.9em;
+  }
+  .about-margin {
+    display: block;
+    margin-top: 4em;
+    padding-top: 2em;
+  }
+  .about-margin-photo {
+    max-width: 22em;
+    margin: 0 auto 3.2em;
+  }
+  .about-margin-section { margin-bottom: 3em; }
+  .about-language-list p {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1em;
+  }
+  .language-level { text-align: right; }
+  .about-margin-quote { margin-top: 3em; }
+  .about-cta {
+    margin-top: 4.5em;
+    padding: 2.2em 1.4em;
+  }
+  .about-cta-copy h2 {
+    font-size: 1.4em;
+    line-height: 1.5;
+  }
+  .about-cta-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.9em;
+  }
+  .about-cta-link {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* ==========================================================
+   21. EXPERIENCE PAGE — Shared page styling
+   ========================================================== */
+.experience-page {
+  padding: 4em 0 5em;
+}
+
+.experience-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5em;
+  padding-bottom: 1em;
+  border-bottom: solid 1px var(--angie-line);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.72em;
+  letter-spacing: 0.16em;
+  color: var(--angie-grey);
+  text-transform: uppercase;
+}
+
+.experience-topline span:first-child {
+  color: var(--angie-green-dark);
+  font-weight: 600;
+}
+
+.experience-header {
+  width: 100%;
+  max-width: none;
+  margin-bottom: 4.6em;
+}
+
+.experience-kicker,
+.experience-header h1,
+.experience-subtitle {
+  max-width: 52em;
+}
+
+.experience-kicker,
+.experience-section-heading > p {
+  margin: 0 0 0.8em;
+  color: var(--angie-accent-dark);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.67em;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+}
+
+.experience-header h1 {
+  margin: 0;
+  font-family: var(--angie-font-zh);
+  font-size: clamp(2.35em, 4vw, 3.35em);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.06em;
+  color: var(--angie-charcoal);
+}
+
+.experience-subtitle {
+  margin: 1.25em 0 0;
+  font-family: var(--angie-font-zh);
+  font-size: 0.96em;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--angie-green-dark);
+}
+
+.experience-title-line {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  margin-top: 2em;
+  background: var(--angie-green-soft);
+}
+
+.experience-title-line::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 4em;
+  height: 3px;
+  background: var(--angie-accent);
+}
+
+.experience-title-line::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--angie-accent);
+}
+
+/* ==========================================================
+   22. EXPERIENCE — Skill Map Image
+   Keep original image proportions
+   ========================================================== */
+
+.experience-skill-map-image {
+	width: min(100%, 44em);
+	margin: 0 auto;
+	padding: 0;
+	line-height: 0;
+}
+
+.experience-skill-map-image img {
+	display: block;
+
+	width: 100%;
+	max-width: 100%;
+
+	height: auto;
+
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+	object-fit: contain;
+}
+
+
+/* Desktop — slight left shift */
+
+@media screen and (min-width: 981px) {
+
+	.experience-skill-map-image {
+		position: relative;
+		left: -3em;
+	}
+
+}
+
+
+/* Tablet */
+
+@media screen and (max-width: 980px) {
+
+	.experience-skill-map-image {
+		width: min(90%, 38em);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+
+	.experience-skill-map-image {
+		width: 100%;
+		max-width: 26em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+/* ==========================================================
+   23. EXPERIENCE — Skill Index + Education
+   ========================================================== */
+.experience-skills,
+.experience-education {
+  margin-top: 7em;
+  padding-top: 4em;
+  border-top: solid 1px var(--angie-line);
+}
+
+.experience-section-heading {
+  margin-bottom: 2.8em;
+}
+
+.experience-section-heading h2 {
+  margin: 0;
+  font-family: var(--angie-font-zh);
+  font-size: 1.75em;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--angie-green-dark);
+}
+
+.experience-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  border-top: solid 1px var(--angie-line);
+  border-bottom: solid 1px var(--angie-line);
+}
+
+.experience-skill-card {
+  position: relative;
+  min-width: 0;
+  padding: 2em 1.6em 2.2em;
+  border-right: solid 1px var(--angie-line);
+}
+
+.experience-skill-card:first-child { padding-left: 0.6em; }
+.experience-skill-card:last-child { border-right: 0; }
+
+.experience-skill-number {
+  display: block;
+  margin-bottom: 1.2em;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.68em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--angie-accent-dark);
+}
+
+
+.experience-skill-card h3 {
+  margin: 0 0 1.3em;
+  font-family: var(--angie-font-zh);
+  font-size: 1.18em;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--angie-green-dark);
+}
+
+.experience-skill-card h3 a {
+  color: inherit;
+  border: 0;
+  text-decoration: none;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.experience-skill-card h3 a:hover {
+  color: var(--angie-accent-dark) !important;
+}
+
+
+.experience-skill-card ul {
+  margin: 0 0 2em;
+  padding-left: 1.1em;
+}
+
+.experience-skill-card li {
+  margin-bottom: 0.45em;
+  font-family: var(--angie-font-zh);
+  font-size: 0.82em;
+  line-height: 1.6;
+  color: var(--angie-charcoal);
+}
+
+
+/* Vertical education timeline */
+.education-timeline {
+  position: relative;
+  max-width: 46em;
+  margin-top: 1em;
+  padding-left: 2.8em;
+}
+
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0.55em;
+  bottom: 0.55em;
+  left: 0.45em;
+  width: 1px;
+  background: var(--angie-green-soft);
+}
+
+.education-timeline-item {
+  position: relative;
+  padding: 0 0 3.2em 0;
+}
+
+.education-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.education-timeline-marker {
+  position: absolute;
+  top: 0.45em;
+  left: -2.75em;
+  width: 0.65em;
+  height: 0.65em;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: var(--angie-paper);
+  border: 2px solid var(--angie-accent);
+}
+
+.education-year {
+  margin: 0 0 0.35em;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.75em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--angie-accent-dark);
+}
+
+.education-timeline-content h3 {
+  margin: 0 0 0.25em;
+  font-family: var(--angie-font-zh);
+  font-size: 1.15em;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--angie-charcoal);
+}
+
+.education-timeline-content > p:last-child {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.7;
+  color: var(--angie-grey);
+}
+
+/* ==========================================================
+   24. EXPERIENCE — Responsive
+   ========================================================== */
+@media screen and (max-width: 980px) {
+  .experience-page {
+    padding-top: 3em;
+  }
+
+  .experience-topline {
+    margin-bottom: 4em;
+  }
+
+  .experience-header {
+    margin-bottom: 3.8em;
+  }
+
+
+  .experience-skill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .experience-skill-card:nth-child(2) {
+    border-right: 0;
+  }
+
+  .experience-skill-card:nth-child(-n+2) {
+    border-bottom: 1px solid var(--angie-line);
+  }
+
+  .experience-skill-card:first-child {
+    padding-left: 1.6em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .experience-page {
+    padding: 2.5em 0 4em;
+  }
+
+  .experience-topline {
+    margin-bottom: 3em;
+    font-size: 0.65em;
+  }
+
+  .experience-header h1 {
+    font-size: 2em;
+  }
+
+  .experience-subtitle {
+    font-size: 0.84em;
+    line-height: 1.8;
+  }
+
+  .skill-map-section {
+    margin-top: 3em;
+  }
+
+
+  .experience-skills,
+  .experience-education {
+    margin-top: 4.5em;
+    padding-top: 3em;
+  }
+
+  .experience-skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-skill-card,
+  .experience-skill-card:first-child {
+    padding: 1.7em 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--angie-line);
+  }
+
+  .experience-skill-card:last-child {
+    border-bottom: 0;
+  }
+
+  .education-timeline {
+    padding-left: 2.4em;
+  }
+
+  .education-timeline-marker {
+    left: -2.35em;
+  }
+}
+
+/* ==========================================================
+   25. CONTACT PAGE
+   Editorial Information Layout
+   ========================================================== */
+
+.contact-page {
+	padding: 4em 0 5em;
+}
+
+
+/* ----------------------------------------------------------
+   Topline
+   ---------------------------------------------------------- */
+
+.contact-topline {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 5em;
+	padding-bottom: 1em;
+
+	border-bottom: solid 1px var(--angie-line);
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.72em;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+
+	color: var(--angie-grey);
+}
+
+.contact-topline span:first-child {
+	color: var(--angie-green-dark);
+	font-weight: 600;
+}
+
+
+/* ----------------------------------------------------------
+   Header
+   ---------------------------------------------------------- */
+
+.contact-header {
+	width: 100%;
+	margin-bottom: 5.5em;
+}
+
+.contact-kicker {
+	margin: 0 0 0.8em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.67em;
+	font-weight: 600;
+	letter-spacing: 0.22em;
+
+	color: var(--angie-accent-dark);
+}
+
+.contact-header h1 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: clamp(2.35em, 4vw, 3.35em);
+	font-weight: 500;
+	line-height: 1.35;
+	letter-spacing: 0.06em;
+
+	color: var(--angie-charcoal);
+}
+
+.contact-lead {
+	max-width: 34em;
+
+	margin: 1.3em 0 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.2em;
+	font-weight: 500;
+	line-height: 1.8;
+	letter-spacing: 0.04em;
+
+	color: var(--angie-green-dark);
+}
+
+.contact-intro {
+	max-width: 42em;
+
+	margin: 1em 0 0;
+
+	font-size: 0.95em;
+	line-height: 2;
+
+	color: var(--angie-grey);
+}
+
+.contact-title-line {
+	position: relative;
+
+	width: 100%;
+	height: 1px;
+
+	margin-top: 2.2em;
+
+	background: var(--angie-green-soft);
+}
+
+.contact-title-line::before {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	left: 0;
+
+	width: 4em;
+	height: 3px;
+
+	background: var(--angie-accent);
+}
+
+.contact-title-line::after {
+	content: "";
+
+	position: absolute;
+	top: -2px;
+	right: 0;
+
+	width: 5px;
+	height: 5px;
+
+	border-radius: 50%;
+
+	background: var(--angie-accent);
+}
+
+
+/* ==========================================================
+   PRIMARY CONTACT
+   ========================================================== */
+
+.contact-primary {
+	display: grid;
+	grid-template-columns: minmax(0, 1.35fr) minmax(15em, 0.65fr);
+
+	gap: 5em;
+
+	align-items: start;
+
+	padding: 0 0 5.5em;
+
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.contact-section-kicker,
+.contact-section-heading > p,
+.contact-meta-label {
+	margin: 0 0 0.7em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+
+	color: var(--angie-accent-dark);
+}
+
+.contact-primary-main h2 {
+	max-width: 15em;
+
+	margin: 0 0 1.5em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.7em;
+	font-weight: 500;
+	line-height: 1.55;
+	letter-spacing: 0.04em;
+
+	color: var(--angie-charcoal);
+}
+
+.contact-email {
+	display: inline-flex;
+	align-items: center;
+
+	gap: 1em;
+
+	border: 0;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.9em;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+
+	color: var(--angie-green-dark);
+}
+
+.contact-email span {
+	color: var(--angie-accent-dark);
+
+	transition: transform 0.2s ease;
+}
+
+.contact-email:hover span {
+	transform: translate(0.2em, -0.12em);
+}
+
+.contact-email-note {
+	max-width: 38em;
+
+	margin: 1.6em 0 0;
+
+	font-size: 0.84em;
+	line-height: 1.9;
+
+	color: var(--angie-grey);
+}
+
+
+/* Contact metadata */
+
+.contact-primary-meta {
+	border-top: solid 1px var(--angie-green-soft);
+}
+
+.contact-meta-item {
+	padding: 1.6em 0;
+
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.contact-meta-item a {
+	border: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.9em;
+	font-weight: 500;
+
+	color: var(--angie-green-dark);
+}
+
+.contact-meta-item > p:not(.contact-meta-label) {
+	margin: 0;
+
+	font-size: 0.95em;
+
+	color: var(--angie-charcoal);
+}
+
+.contact-meta-item > span {
+	display: block;
+
+	margin-top: 0.35em;
+
+	font-size: 0.76em;
+	line-height: 1.7;
+
+	color: var(--angie-grey);
+}
+
+
+/* ==========================================================
+   SECTION HEADING
+   ========================================================== */
+
+.contact-section-heading {
+	margin-bottom: 2.8em;
+}
+
+.contact-section-heading h2 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.75em;
+	font-weight: 500;
+	letter-spacing: 0.06em;
+
+	color: var(--angie-green-dark);
+}
+
+
+/* ==========================================================
+   COLLABORATION
+   ========================================================== */
+
+.contact-collaboration {
+	padding: 5.5em 0;
+
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.contact-collaboration-grid {
+	display: grid;
+
+	grid-template-columns:
+		repeat(4, minmax(0, 1fr));
+
+	width: 100%;
+
+	border-top: solid 1px var(--angie-line);
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.contact-collaboration-item {
+	min-width: 0;
+	box-sizing: border-box;
+
+	padding: 1.8em 1.6em 2em;
+
+	border-right: solid 1px var(--angie-line);
+}
+
+.contact-collaboration-item:last-child {
+	border-right: 0;
+}
+
+.contact-collaboration-number {
+	display: block;
+
+	margin-bottom: 1.2em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.66em;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+
+	color: var(--angie-accent-dark);
+}
+
+.contact-collaboration-item h3 {
+	margin: 0 0 1em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.08em;
+	font-weight: 500;
+	line-height: 1.5;
+
+	color: var(--angie-green-dark);
+}
+
+.contact-collaboration-item p {
+	margin: 0;
+
+	font-size: 0.78em;
+	line-height: 1.8;
+
+	color: var(--angie-grey);
+}
+
+
+/* ==========================================================
+   CONTACT — TABLET
+   ========================================================== */
+
+@media screen and (max-width: 980px) {
+
+	.contact-page {
+		padding-top: 3em;
+	}
+
+	.contact-topline {
+		margin-bottom: 4em;
+	}
+
+	.contact-header {
+		margin-bottom: 4.5em;
+	}
+
+	.contact-primary {
+		grid-template-columns: 1fr;
+
+		gap: 3.5em;
+	}
+
+	.contact-primary-meta {
+		display: grid;
+
+		grid-template-columns:
+			repeat(2, minmax(0, 1fr));
+
+		gap: 2em;
+
+		border-top: 0;
+	}
+
+	.contact-meta-item {
+		border-top: solid 1px var(--angie-green-soft);
+	}
+
+	.contact-collaboration-grid {
+		grid-template-columns:
+			repeat(2, minmax(0, 1fr));
+	}
+
+	.contact-collaboration-item {
+		border-bottom: solid 1px var(--angie-line);
+	}
+
+	.contact-collaboration-item:nth-child(2n) {
+		border-right: 0;
+	}
+
+	.contact-collaboration-item:first-child {
+		padding-left: 1.4em;
+	}
+
+	.contact-collaboration-item:last-child {
+		border-bottom: 0;
+	}
+
+
+}
+
+
+/* ==========================================================
+   CONTACT — MOBILE
+   ========================================================== */
+
+@media screen and (max-width: 736px) {
+
+	.contact-page {
+		padding: 2.5em 0 4em;
+	}
+
+	.contact-topline {
+		margin-bottom: 3em;
+
+		font-size: 0.65em;
+	}
+
+	.contact-header h1 {
+		font-size: 2em;
+	}
+
+	.contact-lead {
+		font-size: 1.08em;
+	}
+
+	.contact-intro {
+		font-size: 0.9em;
+	}
+
+	.contact-primary {
+		padding-bottom: 4em;
+	}
+
+	.contact-primary-main h2 {
+		font-size: 1.45em;
+	}
+
+	.contact-email {
+		font-size: 1.05em;
+
+		word-break: break-all;
+	}
+
+	.contact-primary-meta {
+		grid-template-columns: 1fr;
+
+		gap: 0;
+	}
+
+	.contact-collaboration {
+		padding: 4em 0;
+	}
+
+	.contact-collaboration-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.contact-collaboration-item,
+	.contact-collaboration-item:first-child {
+		padding: 1.5em 0;
+
+		border-right: 0;
+		border-bottom: solid 1px var(--angie-line);
+	}
+
+	.contact-collaboration-item:last-child {
+		border-bottom: 0;
+	}
+
+
+
+}
+
+
+/* ==========================================================
+   26. WRITING PAGE
+   Literary Index
+   ========================================================== */
+
+.writing-page {
+	padding: 4em 0 5em;
+}
+
+
+/* ----------------------------------------------------------
+   Topline
+   ---------------------------------------------------------- */
+
+.writing-topline {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 5em;
+	padding-bottom: 1em;
+
+	border-bottom: solid 1px var(--angie-line);
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.72em;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+
+	color: var(--angie-grey);
+}
+
+.writing-topline span:first-child {
+	color: var(--angie-green-dark);
+	font-weight: 600;
+}
+
+
+/* ----------------------------------------------------------
+   Header
+   ---------------------------------------------------------- */
+
+.writing-header {
+	width: 100%;
+	margin-bottom: 6.5em;
+}
+
+.writing-kicker {
+	margin: 0 0 0.8em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.67em;
+	font-weight: 600;
+	letter-spacing: 0.22em;
+
+	color: var(--angie-accent-dark);
+}
+
+.writing-header h1 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: clamp(2.35em, 4vw, 3.35em);
+	font-weight: 500;
+	line-height: 1.35;
+	letter-spacing: 0.06em;
+
+	color: var(--angie-charcoal);
+}
+
+.writing-intro {
+	max-width: 46em;
+
+	margin: 1.5em 0 0;
+
+	font-size: 0.96em;
+	line-height: 2.05;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-grey);
+}
+
+.writing-title-line {
+	position: relative;
+
+	width: 100%;
+	height: 1px;
+
+	margin-top: 2.2em;
+
+	background: var(--angie-green-soft);
+}
+
+.writing-title-line::before {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	left: 0;
+
+	width: 4em;
+	height: 3px;
+
+	background: var(--angie-accent);
+}
+
+.writing-title-line::after {
+	content: "";
+
+	position: absolute;
+	top: -2px;
+	right: 0;
+
+	width: 5px;
+	height: 5px;
+
+	border-radius: 50%;
+
+	background: var(--angie-accent);
+}
+
+
+/* ==========================================================
+   Section Heading
+   ========================================================== */
+
+.writing-section {
+	margin-top: 7em;
+}
+
+.writing-section-heading {
+	display: grid;
+
+	grid-template-columns: 5em minmax(0, 1fr);
+	gap: 1.5em;
+
+	align-items: center;
+
+	margin-bottom: 2.8em;
+}
+
+.writing-section-number {
+	margin: 0;
+	padding: 0;
+
+	font-family: "Noto Serif TC", Georgia, serif;
+	font-size: 3.2em;
+	font-weight: 400;
+	line-height: 0.9;
+	letter-spacing: -0.03em;
+
+	color: var(--angie-green-dark);
+}
+
+.writing-section-heading p {
+	margin: 0 0 0.45em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+
+	color: var(--angie-accent-dark);
+}
+
+.writing-section-heading h2 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.75em;
+	font-weight: 500;
+	line-height: 1.45;
+	letter-spacing: 0.05em;
+
+	color: var(--angie-green-dark);
+}
+
+
+/* ==========================================================
+   Selected Works
+   ========================================================== */
+
+.writing-work-list {
+	border-top: solid 1px var(--angie-line);
+}
+
+.writing-work-item {
+	display: grid;
+
+	grid-template-columns: 3.2em minmax(0, 1fr) auto;
+	gap: 1.5em;
+
+	align-items: center;
+
+	padding: 2.1em 1em;
+
+	border-bottom: solid 1px var(--angie-line);
+
+	transition:
+		background-color 0.2s ease,
+		transform 0.2s ease;
+}
+
+.writing-work-item:hover {
+	background: rgba(181, 168, 160, 0.55);
+}
+
+.writing-work-number {
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.66em;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+
+	color: var(--angie-accent-dark);
+}
+
+.writing-work-main h3 {
+	margin: 0 0 0.45em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.18em;
+	font-weight: 500;
+	line-height: 1.55;
+
+	color: var(--angie-charcoal);
+}
+
+.writing-work-meta {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.76em;
+	line-height: 1.7;
+
+	color: var(--angie-grey);
+}
+
+.writing-meta-divider {
+	padding: 0 0.35em;
+
+	color: var(--angie-green-soft);
+}
+
+.writing-work-link,
+.writing-research-link {
+	border: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.75em;
+	font-weight: 500;
+	letter-spacing: 0.05em;
+
+	color: var(--angie-green-dark);
+
+	white-space: nowrap;
+}
+
+
+/* ==========================================================
+   Awards
+   ========================================================== */
+
+.writing-award-list {
+	max-width: 56em;
+
+	border-top: solid 1px var(--angie-line);
+}
+
+.writing-award-item {
+	display: grid;
+
+	grid-template-columns: 6em minmax(0, 1fr);
+	gap: 2em;
+
+	align-items: baseline;
+
+	padding: 1.2em 0;
+
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.writing-award-year {
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.76em;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+
+	color: var(--angie-accent-dark);
+}
+
+.writing-award-name {
+	font-size: 0.95em;
+	line-height: 1.65;
+
+	color: var(--angie-charcoal);
+}
+
+
+/* ==========================================================
+   Research & Publication
+   ========================================================== */
+
+.writing-research-list {
+	border-top: solid 1px var(--angie-line);
+}
+
+.writing-research-item {
+	display: grid;
+
+	grid-template-columns: 3.2em minmax(0, 1fr) auto;
+	gap: 1.5em;
+
+	align-items: center;
+
+	padding: 2em 1em;
+
+	border-bottom: solid 1px var(--angie-line);
+
+	transition: background-color 0.2s ease;
+}
+
+.writing-research-item:hover {
+	background: rgba(202, 198, 189, 0.45);
+}
+
+.writing-research-number {
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.66em;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+
+	color: var(--angie-accent-dark);
+}
+
+.writing-research-main h3 {
+	margin: 0 0 0.45em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.08em;
+	font-weight: 500;
+	line-height: 1.65;
+
+	color: var(--angie-charcoal);
+}
+
+.writing-research-meta {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.75em;
+	line-height: 1.75;
+
+	color: var(--angie-grey);
+}
+
+
+/* ==========================================================
+   Themes
+   ========================================================== */
+
+.writing-theme-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	gap: 0.85em;
+}
+
+.writing-theme-list span {
+	display: inline-flex;
+	align-items: center;
+
+	min-height: 2.8em;
+
+	padding: 0.55em 1.15em;
+
+	box-sizing: border-box;
+
+	border: solid 1px rgba(151, 157, 110, 0.28);
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.78em;
+	letter-spacing: 0.04em;
+
+	color: var(--angie-green-dark);
+
+	background: rgba(202, 198, 189, 0.28);
+}
+
+
+/* ==========================================================
+   CTA
+   ========================================================== */
+
+.writing-cta {
+	margin-top: 7em;
+	padding: 2.8em 0;
+
+	border-top: solid 1px var(--angie-line);
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.writing-cta-kicker {
+	margin: 0 0 0.8em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+
+	color: var(--angie-accent-dark);
+}
+
+.writing-cta-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	gap: 3em;
+}
+
+.writing-cta-row h2 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.35em;
+	font-weight: 500;
+	line-height: 1.6;
+
+	color: var(--angie-charcoal);
+}
+
+.writing-cta-row a {
+	border: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.82em;
+	font-weight: 500;
+
+	white-space: nowrap;
+
+	color: var(--angie-green-dark);
+}
+
+
+/* ==========================================================
+   WRITING — TABLET
+   ========================================================== */
+
+@media screen and (max-width: 980px) {
+
+	.writing-page {
+		padding-top: 3em;
+	}
+
+	.writing-topline {
+		margin-bottom: 4em;
+	}
+
+	.writing-header {
+		margin-bottom: 5em;
+	}
+
+	.writing-section {
+		margin-top: 5.5em;
+	}
+
+}
+
+
+/* ==========================================================
+   WRITING — MOBILE
+   ========================================================== */
+
+@media screen and (max-width: 736px) {
+
+	.writing-page {
+		padding: 2.5em 0 4em;
+	}
+
+	.writing-topline {
+		margin-bottom: 3em;
+		font-size: 0.65em;
+	}
+
+	.writing-topline span:last-child {
+		display: none;
+	}
+
+	.writing-header h1 {
+		font-size: 2em;
+	}
+
+	.writing-intro {
+		font-size: 0.9em;
+		line-height: 1.95;
+	}
+
+	.writing-section {
+		margin-top: 4.5em;
+	}
+
+	.writing-section-heading {
+	grid-template-columns: 3.7em minmax(0, 1fr);
+	gap: 1em;
+
+	align-items: center;
+}
+
+.writing-section-number {
+	font-size: 2.4em;
+	}
+
+	.writing-section-heading h2 {
+		font-size: 1.4em;
+	}
+
+
+	/* Selected works */
+
+	.writing-work-item {
+		grid-template-columns: 2.3em minmax(0, 1fr);
+		gap: 0.5em 1em;
+
+		align-items: start;
+
+		padding: 1.6em 0;
+	}
+
+	.writing-work-link {
+		grid-column: 2;
+
+		margin-top: 0.5em;
+	}
+
+	.writing-work-main h3 {
+		font-size: 1.05em;
+	}
+
+	.writing-work-meta {
+		display: block;
+	}
+
+	.writing-meta-divider {
+		padding: 0 0.2em;
+	}
+
+
+	/* Awards */
+
+	.writing-award-item {
+		grid-template-columns: 4.5em minmax(0, 1fr);
+		gap: 1em;
+
+		padding: 1em 0;
+	}
+
+
+	/* Research */
+
+	.writing-research-item {
+		grid-template-columns: 2.3em minmax(0, 1fr);
+		gap: 0.5em 1em;
+
+		align-items: start;
+
+		padding: 1.6em 0;
+	}
+
+	.writing-research-link {
+		grid-column: 2;
+
+		margin-top: 0.5em;
+	}
+
+	.writing-research-main h3 {
+		font-size: 1em;
+	}
+
+	.writing-research-meta {
+		display: block;
+	}
+
+
+	/* Themes */
+
+	.writing-theme-list {
+		gap: 0.65em;
+	}
+
+	.writing-theme-list span {
+		padding: 0.5em 0.9em;
+
+		font-size: 0.72em;
+	}
+
+
+	/* CTA */
+
+	.writing-cta {
+		margin-top: 5em;
+	}
+
+	.writing-cta-row {
+		display: block;
+	}
+
+	.writing-cta-row h2 {
+		margin-bottom: 1.2em;
+
+		font-size: 1.2em;
+	}
+
+}
+
+
+/* ==========================================================
+   27. LITERARY WORK PAGE
+   Individual Reading Page
+   ========================================================== */
+
+.literary-work-page {
+	padding: 4em 0 5em;
+}
+
+
+/* ----------------------------------------------------------
+   Topline
+   ---------------------------------------------------------- */
+
+.literary-work-topline {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 4.5em;
+	padding-bottom: 1em;
+
+	border-bottom: solid 1px var(--angie-line);
+
+	font-size: 0.72em;
+	font-weight: 500;
+	letter-spacing: 0.16em;
+
+	color: var(--angie-grey);
+}
+
+.literary-work-topline span:first-child {
+	color: var(--angie-green-dark);
+	font-weight: 600;
+}
+
+
+/* ----------------------------------------------------------
+   Back
+   ---------------------------------------------------------- */
+
+.literary-work-back {
+	margin-bottom: 4.5em;
+}
+
+.literary-work-back a {
+	display: inline-block;
+
+	border: 0;
+
+	font-size: 0.76em;
+	font-weight: 500;
+	letter-spacing: 0.06em;
+
+	color: var(--angie-green-dark);
+}
+
+.literary-work-back a:hover {
+	color: var(--angie-accent-dark) !important;
+}
+
+
+/* ----------------------------------------------------------
+   Article Header
+   ---------------------------------------------------------- */
+
+.literary-work-header {
+	width: 100%;
+	max-width: 54em;
+
+	margin-bottom: 3.8em;
+}
+
+.literary-work-type {
+	margin: 0 0 1.25em;
+
+	font-size: 0.68em;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+
+	color: var(--angie-accent-dark);
+}
+
+.literary-work-header h1 {
+	margin: 0;
+
+	font-size: clamp(2.7em, 5vw, 4.2em);
+	font-weight: 500;
+	line-height: 1.25;
+	letter-spacing: 0.08em;
+
+	color: var(--angie-charcoal);
+}
+
+.literary-work-source {
+	margin: 1.5em 0 0;
+
+	font-size: 0.82em;
+	line-height: 1.8;
+	letter-spacing: 0.04em;
+
+	color: var(--angie-grey);
+}
+
+.literary-work-title-line {
+	position: relative;
+
+	width: 100%;
+	height: 1px;
+
+	margin-top: 2.4em;
+
+	background: var(--angie-green-soft);
+}
+
+.literary-work-title-line::before {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	left: 0;
+
+	width: 4em;
+	height: 3px;
+
+	background: var(--angie-accent);
+}
+
+.literary-work-title-line::after {
+	content: "";
+
+	position: absolute;
+	top: -2px;
+	right: 0;
+
+	width: 5px;
+	height: 5px;
+
+	border-radius: 50%;
+
+	background: var(--angie-accent);
+}
+
+
+/* ----------------------------------------------------------
+   Article Body
+   ---------------------------------------------------------- */
+
+.literary-work-body {
+	width: 100%;
+	max-width: 38em;
+
+	margin: 0 auto;
+
+	color: var(--angie-charcoal);
+}
+
+
+/* Normal paragraphs */
+
+.literary-work-body p {
+	margin: 0 0 1.8em;
+
+	font-size: 1em;
+	line-height: 2.15;
+	letter-spacing: 0.035em;
+}
+
+
+/* Poem layout */
+
+.literary-work-body .poem {
+	margin: 0;
+
+	font-size: 1.02em;
+	line-height: 1.6;
+	letter-spacing: 0.035em;
+
+	white-space: normal;
+}
+
+.literary-work-body .poem-stanza {
+	margin-bottom: 1.5em;
+}
+
+.literary-work-body .poem-stanza:last-child {
+	margin-bottom: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Bottom Navigation
+   ---------------------------------------------------------- */
+
+.literary-work-navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	gap: 3em;
+
+	margin-top: 5em;
+	padding-top: 1.8em;
+
+	border-top: solid 1px var(--angie-line);
+}
+
+.literary-work-navigation a {
+	border: 0;
+
+	font-size: 0.76em;
+	font-weight: 500;
+	line-height: 1.6;
+	letter-spacing: 0.04em;
+
+	color: var(--angie-green-dark);
+}
+
+.literary-work-navigation a:last-child {
+	text-align: right;
+}
+
+.literary-work-navigation a:hover {
+	color: var(--angie-accent-dark) !important;
+}
+
+
+/* ==========================================================
+   LITERARY WORK — TABLET
+   ========================================================== */
+
+@media screen and (max-width: 980px) {
+
+	.literary-work-page {
+		padding-top: 3em;
+	}
+
+	.literary-work-topline {
+		margin-bottom: 4em;
+	}
+
+	.literary-work-back {
+		margin-bottom: 3.5em;
+	}
+
+	.literary-work-header {
+		margin-bottom: 4.5em;
+	}
+
+	.literary-work-body {
+		max-width: 36em;
+	}
+
+}
+
+
+/* ==========================================================
+   LITERARY WORK — MOBILE
+   ========================================================== */
+
+@media screen and (max-width: 736px) {
+
+	.literary-work-page {
+		padding: 2.5em 0 4em;
+	}
+
+	.literary-work-topline {
+		margin-bottom: 3em;
+
+		font-size: 0.65em;
+	}
+
+	.literary-work-topline span:last-child {
+		display: none;
+	}
+
+	.literary-work-back {
+		margin-bottom: 3em;
+	}
+
+	.literary-work-header {
+		margin-bottom: 3.8em;
+	}
+
+	.literary-work-header h1 {
+		font-size: 2.5em;
+	}
+
+	.literary-work-source {
+		font-size: 0.78em;
+	}
+
+	.literary-work-body {
+		max-width: 100%;
+	}
+
+	.literary-work-body p {
+		font-size: 0.96em;
+		line-height: 2.05;
+	}
+
+	.literary-work-body .poem {
+		font-size: 0.98em;
+		line-height: 1.65;
+	}
+
+	.literary-work-navigation {
+		display: grid;
+		grid-template-columns: 1fr;
+
+		gap: 1.4em;
+
+		margin-top: 5em;
+	}
+
+	.literary-work-navigation a:last-child {
+		text-align: left;
+	}
+
+}
+
+/* ==========================================================
+   LITERARY WORK — ESSAY
+   Long-form prose reading
+   ========================================================== */
+
+.literary-work-essay {
+	max-width: 42em;
+}
+
+.literary-work-essay p {
+	margin: 0 0 1.7em;
+
+	font-size: 1em;
+	line-height: 1.95;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-charcoal);
+}
+
+
+/* Quoted passages */
+
+.literary-work-essay .literary-work-quote {
+	margin: 2.2em 0;
+
+	padding: 1.3em 1.5em;
+
+	border-left: solid 2px var(--angie-accent);
+
+	background: rgba(181, 168, 160, 0.22);
+
+	font-size: 0.95em;
+	line-height: 1.9;
+
+	color: var(--angie-green-dark);
+}
+
+
+/* Image area */
+
+.literary-work-image {
+	position: relative;
+
+	width: 100%;
+	max-width: 32em;
+
+	margin: 4em auto 0;
+
+	padding: 0.8em;
+
+	box-sizing: border-box;
+
+	border: solid 1px rgba(151, 157, 110, 0.24);
+
+	background: var(--angie-paper-deep);
+}
+
+/* Dusty pink tape accent */
+.literary-work-image::before {
+	content: "";
+
+	position: absolute;
+	z-index: 3;
+
+	top: -0.15em;
+	right: -0.55em;
+
+	width: 2.8em;
+	height: 0.85em;
+
+	background: rgba(187, 154, 136, 0.78);
+
+	transform: rotate(45deg);
+	transform-origin: center;
+}
+
+
+/* folded corner */
+
+.literary-work-image::after {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	right: -1px;
+
+	width: 1.6em;
+	height: 1.6em;
+
+	background: var(--angie-paper);
+
+	clip-path: polygon(
+		100% 0,
+		100% 100%,
+		0 0
+	);
+}
+
+
+.literary-work-image img {
+	display: block;
+
+	width: 100%;
+	height: auto;
+
+	margin: 0;
+
+	border: 0;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+
+	.literary-work-essay {
+		max-width: 100%;
+	}
+
+	.literary-work-essay p {
+		font-size: 0.96em;
+		line-height: 1.85;
+		margin-bottom: 1.5em;
+	}
+
+	.literary-work-essay .literary-work-quote {
+		margin: 1.8em 0;
+		padding: 1.1em 1.2em;
+
+		font-size: 0.93em;
+		line-height: 1.8;
+	}
+
+	.literary-work-image {
+		margin-top: 3em;
+	}
+
+}
+
+
+/* ==========================================================
+   LITERARY WORK — REFERENCES
+   ========================================================== */
+
+.literary-work-references {
+	margin-top: 4em;
+	padding-top: 2em;
+
+	border-top: solid 1px var(--angie-line);
+}
+
+.literary-work-references-label {
+	margin-bottom: 1.5em !important;
+
+	font-size: 0.72em !important;
+	font-weight: 600;
+	letter-spacing: 0.14em !important;
+
+	color: var(--angie-accent-dark) !important;
+}
+
+.literary-work-references p:not(.literary-work-references-label) {
+	margin-bottom: 1em;
+
+	font-size: 0.82em;
+	line-height: 1.8;
+
+	color: var(--angie-grey);
+}
+
+/* ==========================================================
+   28. CONTENT STRATEGY PAGE
+   Editorial Case Study Layout
+   ========================================================== */
+
+.content-page {
+	padding: 4em 0 5em;
+}
+
+
+/* ==========================================================
+   TOPLINE
+   ========================================================== */
+
+.content-topline {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 5em;
+	padding-bottom: 1em;
+
+	border-bottom: solid 1px var(--angie-line);
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.72em;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+
+	color: var(--angie-grey);
+}
+
+.content-topline span:first-child {
+	color: var(--angie-green-dark);
+	font-weight: 600;
+}
+
+
+/* ==========================================================
+   PAGE HEADER
+   ========================================================== */
+
+.content-header {
+	width: 100%;
+	margin-bottom: 6.5em;
+}
+
+.content-kicker {
+	margin: 0 0 0.8em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.67em;
+	font-weight: 600;
+	letter-spacing: 0.22em;
+
+	color: var(--angie-accent-dark);
+}
+
+.content-header h1 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: clamp(2.35em, 4vw, 3.35em);
+	font-weight: 500;
+	line-height: 1.35;
+	letter-spacing: 0.06em;
+
+	color: var(--angie-charcoal);
+}
+
+.content-intro {
+	max-width: 46em;
+
+	margin: 1.5em 0 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.96em;
+	line-height: 2.05;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-grey);
+}
+
+.content-title-line {
+	position: relative;
+
+	width: 100%;
+	height: 1px;
+
+	margin-top: 2.2em;
+
+	background: var(--angie-green-soft);
+}
+
+.content-title-line::before {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	left: 0;
+
+	width: 4em;
+	height: 3px;
+
+	background: var(--angie-accent);
+}
+
+.content-title-line::after {
+	content: "";
+
+	position: absolute;
+	top: -2px;
+	right: 0;
+
+	width: 5px;
+	height: 5px;
+
+	border-radius: 50%;
+
+	background: var(--angie-accent);
+}
+
+
+/* ==========================================================
+   SECTION
+   ========================================================== */
+
+.content-section {
+	margin-top: 7em;
+}
+
+.content-section-heading {
+	display: grid;
+
+	grid-template-columns: 5em minmax(0, 1fr);
+	gap: 1.5em;
+
+	align-items: center;
+
+	margin-bottom: 3em;
+}
+
+.content-section-number {
+	margin: 0;
+	padding: 0;
+
+	font-family: "Noto Serif TC", Georgia, serif;
+	font-size: 3.2em;
+	font-weight: 400;
+	line-height: 0.9;
+	letter-spacing: -0.03em;
+
+	color: var(--angie-green-dark);
+}
+
+.content-section-heading p {
+	margin: 0 0 0.45em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+
+	color: var(--angie-accent-dark);
+}
+
+.content-section-heading h2 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.75em;
+	font-weight: 500;
+	line-height: 1.45;
+	letter-spacing: 0.05em;
+
+	color: var(--angie-green-dark);
+}
+
+
+/* ==========================================================
+   01 SELECTED PROJECTS
+   ========================================================== */
+
+.content-project-grid {
+	display: grid;
+
+	grid-template-columns:
+		repeat(2, minmax(0, 1fr));
+
+	gap: 1.5em;
+}
+
+
+/* Individual case card */
+
+.content-project-card {
+	position: relative;
+
+	min-width: 0;
+
+	padding: 2em 2em 2.2em;
+
+	box-sizing: border-box;
+
+	border: solid 1px rgba(151, 157, 110, 0.22);
+
+	background:
+		rgba(251, 247, 239, 0.5);
+
+	transition:
+		transform 0.22s ease,
+		background-color 0.22s ease,
+		border-color 0.22s ease;
+}
+
+
+/* clipped upper-right paper corner */
+
+.content-project-card::after {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	right: -1px;
+
+	width: 1.25em;
+	height: 1.25em;
+
+	background: var(--angie-paper);
+
+	clip-path: polygon(
+		100% 0,
+		100% 100%,
+		0 0
+	);
+}
+
+
+.content-project-card:hover {
+	transform: translateY(-3px);
+
+	background:
+		rgba(181, 168, 160, 0.28);
+
+	border-color:
+		rgba(187, 154, 136, 0.5);
+}
+
+
+.content-project-number {
+	display: block;
+
+	margin-bottom: 1.5em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.7em;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+
+	color: var(--angie-accent-dark);
+}
+
+
+.content-project-en {
+	margin: 0 0 0.5em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+
+	color: var(--angie-accent-dark);
+}
+
+
+.content-project-card h3 {
+	margin: 0 0 1.2em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.35em;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.04em;
+
+	color: var(--angie-green-dark);
+}
+
+
+.content-project-skills {
+	margin: 0 0 1.1em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.82em;
+	font-weight: 500;
+	line-height: 1.8;
+
+	color: var(--angie-charcoal);
+}
+
+
+.content-project-description {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.86em;
+	line-height: 1.95;
+
+	color: var(--angie-grey);
+}
+
+
+/* Skills / output tags */
+
+.content-project-tags {
+	display: flex;
+	flex-wrap: wrap;
+
+	gap: 0.55em;
+
+	margin-top: 1.7em;
+}
+
+
+.content-project-tags span {
+	display: inline-flex;
+	align-items: center;
+
+	min-height: 2em;
+
+	padding:
+		0.25em
+		0.7em;
+
+	box-sizing: border-box;
+
+	border:
+		solid 1px
+		rgba(151, 157, 110, 0.2);
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.67em;
+	line-height: 1.4;
+
+	color: var(--angie-green-dark);
+
+	background:
+		rgba(202, 198, 189, 0.28);
+}
+
+
+/* ==========================================================
+   02 INDEPENDENT PROJECTS
+   ========================================================== */
+
+.content-independent-grid {
+	display: grid;
+
+	grid-template-columns:
+		repeat(2, minmax(0, 1fr));
+
+	gap: 2em;
+}
+
+
+.content-independent-card {
+	display: grid;
+
+	grid-template-columns:
+		minmax(9em, 0.9fr)
+		minmax(0, 1.1fr);
+
+	gap: 1.6em;
+
+	align-items: start;
+
+	min-width: 0;
+
+	padding: 1.2em;
+
+	box-sizing: border-box;
+
+	border:
+		solid 1px
+		rgba(151, 157, 110, 0.22);
+
+	background:
+		rgba(251, 247, 239, 0.42);
+}
+
+
+/* Image */
+
+.content-independent-image {
+	position: relative;
+
+	margin: 0;
+	padding: 0;
+
+	overflow: hidden;
+
+	background: var(--angie-paper-deep);
+}
+
+
+.content-independent-image::after {
+	content: "";
+
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	width: 1.15em;
+	height: 1.15em;
+
+	background: var(--angie-paper);
+
+	clip-path: polygon(
+		100% 0,
+		100% 100%,
+		0 0
+	);
+}
+
+
+.content-independent-image img {
+	display: block;
+
+	width: 100%;
+	height: auto;
+
+	margin: 0;
+	padding: 0;
+
+	border: 0;
+}
+
+
+/* Text */
+
+.content-independent-copy {
+	min-width: 0;
+	padding-top: 0.25em;
+}
+
+
+.content-independent-label {
+	margin: 0 0 0.75em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.59em;
+	font-weight: 600;
+	line-height: 1.6;
+	letter-spacing: 0.14em;
+
+	color: var(--angie-accent-dark);
+}
+
+
+.content-independent-copy h3 {
+	margin: 0 0 0.25em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.2em;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.04em;
+
+	color: var(--angie-green-dark);
+}
+
+
+.content-independent-handle {
+	margin: 0 0 1.2em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.7em;
+	letter-spacing: 0.03em;
+
+	color: var(--angie-accent-dark);
+}
+
+
+.content-independent-copy > p:not(
+	.content-independent-label,
+	.content-independent-handle,
+	.content-independent-skills
+) {
+	margin: 0 0 1.25em;
+
+	font-size: 0.8em;
+	line-height: 1.9;
+
+	color: var(--angie-grey);
+}
+
+
+.content-independent-skills {
+	margin: 0 0 1.4em;
+
+	font-size: 0.72em;
+	line-height: 1.7;
+
+	color: var(--angie-charcoal);
+}
+
+
+.content-independent-link {
+	display: inline-flex;
+	align-items: center;
+
+	border: 0;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.75em;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+
+	color: var(--angie-green-dark);
+}
+
+
+.content-independent-link:hover {
+	color: var(--angie-accent-dark) !important;
+}
+
+
+/* ==========================================================
+   03 CONTENT CAPABILITIES
+   ========================================================== */
+
+.content-capability-grid {
+	display: grid;
+
+	grid-template-columns:
+		repeat(6, minmax(0, 1fr));
+
+	width: 100%;
+
+	border-top: solid 1px var(--angie-line);
+	border-bottom: solid 1px var(--angie-line);
+}
+
+
+.content-capability-item {
+	min-width: 0;
+
+	padding: 1.7em 1em 1.6em;
+
+	box-sizing: border-box;
+
+	border-right: solid 1px var(--angie-line);
+
+	text-align: center;
+}
+
+
+.content-capability-item:last-child {
+	border-right: 0;
+}
+
+
+.content-capability-number {
+	display: block;
+
+	margin-bottom: 1.1em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.62em;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+
+	color: var(--angie-accent-dark);
+}
+
+
+.content-capability-item h3 {
+	margin: 0 0 0.45em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.9em;
+	font-weight: 500;
+	line-height: 1.55;
+
+	color: var(--angie-green-dark);
+}
+
+
+.content-capability-item p {
+	margin: 0;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.62em;
+	line-height: 1.6;
+
+	color: var(--angie-grey);
+}
+
+
+/* ==========================================================
+   CONTACT CTA
+   ========================================================== */
+
+.content-cta {
+	position: relative;
+
+	margin-top: 7em;
+	padding: 2.5em 2.7em;
+
+	border:
+		solid 1px
+		rgba(151, 157, 110, 0.22);
+
+	background:
+		linear-gradient(
+			90deg,
+			rgba(202, 198, 189, 0.34),
+			rgba(247, 243, 236, 0.75)
+		);
+}
+
+
+.content-cta::before {
+	content: "";
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 3px;
+	height: 100%;
+
+	background: var(--angie-accent);
+}
+
+
+.content-cta-kicker {
+	margin: 0 0 0.7em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+
+	color: var(--angie-accent-dark);
+}
+
+
+.content-cta-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	gap: 3em;
+}
+
+
+.content-cta-row h2 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.35em;
+	font-weight: 500;
+	line-height: 1.6;
+
+	color: var(--angie-charcoal);
+}
+
+
+.content-cta-row a {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	min-width: 8.5em;
+
+	padding: 0.75em 1.2em;
+
+	box-sizing: border-box;
+
+	border: solid 1px var(--angie-accent);
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.8em;
+	font-weight: 500;
+
+	color: var(--angie-accent-dark);
+
+	background: transparent;
+}
+
+
+.content-cta-row a:hover {
+	background: var(--angie-accent);
+
+	color: var(--angie-charcoal) !important;
+}
+
+
+/* ==========================================================
+   CONTENT STRATEGY — TABLET
+   ========================================================== */
+
+@media screen and (max-width: 1280px) {
+
+	.content-capability-grid {
+		grid-template-columns:
+			repeat(3, minmax(0, 1fr));
+	}
+
+	.content-capability-item:nth-child(3n) {
+		border-right: 0;
+	}
+
+	.content-capability-item:nth-child(-n+3) {
+		border-bottom: solid 1px var(--angie-line);
+	}
+
+}
+
+
+@media screen and (max-width: 980px) {
+
+	.content-page {
+		padding-top: 3em;
+	}
+
+
+	.content-topline {
+		margin-bottom: 4em;
+	}
+
+
+	.content-header {
+		margin-bottom: 5em;
+	}
+
+
+	.content-section {
+		margin-top: 5.5em;
+	}
+
+
+	/* Business cases */
+
+	.content-project-grid {
+		grid-template-columns: 1fr;
+	}
+
+
+	/* Independent projects */
+
+	.content-independent-grid {
+		grid-template-columns: 1fr;
+	}
+
+
+	.content-independent-card {
+		grid-template-columns:
+			minmax(11em, 0.75fr)
+			minmax(0, 1.25fr);
+	}
+
+
+	/* CTA */
+
+	.content-cta-row {
+		gap: 2em;
+	}
+
+}
+
+
+/* ==========================================================
+   CONTENT STRATEGY — MOBILE
+   ========================================================== */
+
+@media screen and (max-width: 736px) {
+
+	.content-page {
+		padding: 2.5em 0 4em;
+	}
+
+
+	.content-topline {
+		margin-bottom: 3em;
+
+		font-size: 0.65em;
+	}
+
+
+	.content-topline span:last-child {
+		display: none;
+	}
+
+
+	.content-header h1 {
+		font-size: 2em;
+	}
+
+
+	.content-intro {
+		font-size: 0.9em;
+		line-height: 1.95;
+	}
+
+
+	/* Section title */
+
+	.content-section {
+		margin-top: 4.5em;
+	}
+
+
+	.content-section-heading {
+		grid-template-columns:
+			3.7em
+			minmax(0, 1fr);
+
+		gap: 1em;
+
+		margin-bottom: 2.2em;
+	}
+
+
+	.content-section-number {
+		font-size: 2.4em;
+	}
+
+
+	.content-section-heading h2 {
+		font-size: 1.4em;
+	}
+
+
+	/* Business cards */
+
+	.content-project-card {
+		padding:
+			1.6em
+			1.3em
+			1.7em;
+	}
+
+
+	.content-project-card h3 {
+		font-size: 1.18em;
+	}
+
+
+	.content-project-description {
+		font-size: 0.82em;
+		line-height: 1.85;
+	}
+
+
+	/* Independent projects */
+
+	.content-independent-card {
+		display: block;
+
+		padding: 1em;
+	}
+
+
+	.content-independent-image {
+		max-width: 22em;
+
+		margin:
+			0 auto
+			1.7em;
+	}
+
+
+	.content-independent-copy {
+		padding: 0 0.3em 0.4em;
+	}
+
+
+	/* Capabilities */
+
+	.content-capability-grid {
+		grid-template-columns:
+			repeat(2, minmax(0, 1fr));
+	}
+
+
+	.content-capability-item {
+		border-right: solid 1px var(--angie-line);
+		border-bottom: solid 1px var(--angie-line);
+	}
+
+
+	.content-capability-item:nth-child(2n) {
+		border-right: 0;
+	}
+
+
+	.content-capability-item:nth-child(3n) {
+		border-right: solid 1px var(--angie-line);
+	}
+
+
+	.content-capability-item:nth-child(6) {
+		border-right: 0;
+	}
+
+
+	.content-capability-item:nth-child(-n+3) {
+		border-bottom: solid 1px var(--angie-line);
+	}
+
+
+	.content-capability-item:nth-last-child(-n+2) {
+		border-bottom: 0;
+	}
+
+
+	/* CTA */
+
+	.content-cta {
+		margin-top: 5em;
+
+		padding:
+			2.1em
+			1.4em;
+	}
+
+
+	.content-cta-row {
+		display: block;
+	}
+
+
+	.content-cta-row h2 {
+		margin-bottom: 1.4em;
+
+		font-size: 1.15em;
+	}
+
+
+	.content-cta-row a {
+		min-width: 0;
+	}
+
+}
+
+/* ==========================================================
+   CONTENT PAGE — PHILOSOPHY & MANIFESTO
+   ========================================================== */
+
+.content-manifesto {
+	margin-top: 1.6em;
+}
+
+.content-manifesto-zh {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.28em;
+	font-weight: 500;
+	line-height: 1.65;
+	letter-spacing: 0.04em;
+
+	color: var(--angie-green-dark);
+}
+
+.content-manifesto-en {
+	margin: 0.3em 0 0;
+
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 0.85em;
+	font-style: italic;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-accent-dark);
+}
+
+
+/* Content philosophy */
+
+.content-philosophy {
+	display: grid;
+
+	grid-template-columns: minmax(9em, 0.32fr) minmax(0, 0.68fr);
+	gap: 4em;
+
+	margin: 0 0 7em;
+	padding: 2.8em 0;
+
+	border-top: solid 1px var(--angie-line);
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.content-philosophy-heading p {
+	margin: 0 0 0.6em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+
+	color: var(--angie-accent-dark);
+}
+
+.content-philosophy-heading h2 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.5em;
+	font-weight: 500;
+	letter-spacing: 0.05em;
+
+	color: var(--angie-green-dark);
+}
+
+.content-philosophy-body {
+	position: relative;
+
+	padding-left: 2em;
+
+	border-left: solid 2px var(--angie-accent);
+}
+
+.content-philosophy-body p {
+	max-width: 38em;
+
+	margin: 0 0 1.35em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.92em;
+	line-height: 2;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-charcoal);
+}
+
+.content-philosophy-body p:last-child {
+	margin-bottom: 0;
+}
+
+
+/* CTA supporting sentence */
+
+.content-cta-note {
+	margin: 0.5em 0 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.82em;
+	line-height: 1.7;
+
+	color: var(--angie-grey);
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+
+	.content-manifesto-zh {
+		font-size: 1.08em;
+	}
+
+	.content-manifesto-en {
+		font-size: 0.78em;
+		line-height: 1.6;
+	}
+
+	.content-philosophy {
+		display: block;
+
+		margin-bottom: 4.5em;
+		padding: 2.2em 0;
+	}
+
+	.content-philosophy-heading {
+		margin-bottom: 2em;
+	}
+
+	.content-philosophy-body {
+		padding-left: 1.3em;
+	}
+
+	.content-philosophy-body p {
+		font-size: 0.88em;
+		line-height: 1.95;
+	}
+
+}
+
+/* ==========================================================
+   CONTENT PHILOSOPHY — FEATURED QUOTE
+   ========================================================== */
+
+.content-philosophy-body {
+	position: relative;
+	padding-left: 2.4em;
+	border-left: solid 2px var(--angie-accent);
+}
+
+
+/* Main philosophy quote */
+
+.content-philosophy-quote {
+	position: relative;
+	margin-bottom: 2.4em;
+	padding: 0.15em 0 2em;
+	border-bottom: solid 1px var(--angie-line);
+}
+
+
+/* Chinese statement */
+
+.content-philosophy-quote-zh {
+	position: relative;
+	z-index: 1;
+
+	margin: 0 !important;
+
+	font-family: var(--angie-font-zh) !important;
+	font-size: 1.38em !important;
+	font-weight: 500;
+	line-height: 1.65 !important;
+	letter-spacing: 0.045em !important;
+
+	color: var(--angie-green-dark) !important;
+}
+
+
+/* English statement */
+
+.content-philosophy-quote-en {
+	position: relative;
+	z-index: 1;
+
+	margin: 0.45em 0 0 !important;
+
+	font-family: Georgia, "Times New Roman", serif !important;
+	font-size: 0.88em !important;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.6 !important;
+	letter-spacing: 0.025em !important;
+
+	color: var(--angie-accent-dark) !important;
+}
+
+
+/* Philosophy paragraphs */
+
+.content-philosophy-copy p {
+	max-width: 38em;
+
+	margin: 0 0 1.35em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.92em;
+	line-height: 2;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-charcoal);
+}
+
+.content-philosophy-copy p:last-child {
+	margin-bottom: 0;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+
+	.content-philosophy-body {
+		padding-left: 1.3em;
+	}
+
+	.content-philosophy-quote {
+		margin-bottom: 2em;
+		padding-bottom: 1.6em;
+	}
+
+	.content-philosophy-quote-mark {
+		font-size: 4.2em;
+	}
+
+	.content-philosophy-quote-zh {
+		font-size: 1.15em !important;
+	}
+
+	.content-philosophy-quote-en {
+		font-size: 0.8em !important;
+	}
+
+}
+
+
+/* ==========================================================
+   GLOBAL EDITORIAL QUOTE MARKS
+   ========================================================== */
+
+.editorial-quote {
+	position: relative;
+}
+
+.editorial-quote::before,
+.editorial-quote::after {
+	position: absolute;
+
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 5em;
+	font-weight: 400;
+	line-height: 1;
+
+	color: rgba(187, 154, 136, 0.22);
+
+	pointer-events: none;
+}
+
+.editorial-quote::before {
+	content: "“";
+
+	top: -0.35em;
+	left: -0.05em;
+}
+
+.editorial-quote::after {
+	content: "”";
+
+	right: 0.05em;
+	bottom: -0.38em;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+
+	.editorial-quote::before,
+	.editorial-quote::after {
+		font-size: 4.2em;
+	}
+
+}
+
+/* ==========================================================
+   CONTENT PHILOSOPHY
+   ========================================================== */
+
+.content-philosophy-section {
+	padding: 0;
+	margin: 0 0 6em 0;
+	border: 0;
+}
+
+.content-philosophy-grid {
+	display: grid;
+	grid-template-columns: 260px minmax(0, 1fr);
+	column-gap: 4.5em;
+	row-gap: 2em;
+	align-items: start;
+}
+
+.content-philosophy-heading {
+	padding-top: 0.2em;
+}
+
+.content-philosophy-kicker {
+	margin: 0 0 0.7em 0;
+	font-size: 0.8rem;
+	letter-spacing: 0.24em;
+	text-transform: uppercase;
+	color: var(--angie-accent);
+}
+
+.content-philosophy-heading h2 {
+	margin: 0;
+	color: var(--angie-green-dark);
+	font-family: "Noto Serif TC", serif;
+	font-size: 2.1rem;
+	font-weight: 500;
+	line-height: 1.3;
+}
+
+.content-philosophy-main {
+	max-width: 760px;
+}
+
+.content-philosophy-quote {
+	position: relative;
+	margin: 0 0 2.5em 0;
+	padding: 2.4em 2.8em 2em;
+	text-align: center;
+	border: 0;
+}
+
+.content-philosophy-quote::before,
+.content-philosophy-quote::after {
+	position: absolute;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 5.5rem;
+	line-height: 1;
+	color: rgba(187, 154, 136, 0.22);
+	pointer-events: none;
+}
+
+.content-philosophy-quote::before {
+	content: "“";
+	top: -0.02em;
+	left: 0.05em;
+}
+
+.content-philosophy-quote::after {
+	content: "”";
+	right: 0.05em;
+	bottom: -0.28em;
+}
+
+.content-philosophy-quote-zh {
+	margin: 0 0 0.45em 0;
+	font-family: "Noto Serif TC", serif;
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 1.5;
+	color: var(--angie-green-dark);
+}
+
+.content-philosophy-quote-en {
+	margin: 0;
+	font-family: "Cormorant Garamond", "Times New Roman", serif;
+	font-size: 1.45rem;
+	font-style: italic;
+	font-weight: 500;
+	line-height: 1.5;
+	color: var(--angie-accent);
+}
+
+.content-philosophy-text p {
+	margin: 0 0 1.35em 0;
+	font-size: 1.06rem;
+	line-height: 2;
+	color: var(--angie-charcoal);
+}
+
+.content-philosophy-text p:last-child {
+	margin-bottom: 0;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 980px) {
+
+	.content-philosophy-grid {
+		grid-template-columns: 1fr;
+		row-gap: 1.8em;
+	}
+
+	.content-philosophy-main {
+		max-width: 100%;
+	}
+
+	.content-philosophy-quote {
+		padding: 2em 1.8em 1.6em;
+	}
+
+	.content-philosophy-quote-zh {
+		font-size: 1.7rem;
+	}
+
+	.content-philosophy-quote-en {
+		font-size: 1.25rem;
+	}
+}
+
+@media screen and (max-width: 736px) {
+
+	.content-philosophy-quote::before,
+	.content-philosophy-quote::after {
+		font-size: 4.4rem;
+	}
+
+	.content-philosophy-quote {
+		padding: 1.8em 1.2em 1.5em;
+	}
+
+	.content-philosophy-quote-zh {
+		font-size: 1.45rem;
+	}
+
+	.content-philosophy-quote-en {
+		font-size: 1.12rem;
+	}
+
+	.content-philosophy-text p {
+		font-size: 1rem;
+		line-height: 1.9;
+	}
+}
+
+
+/* Content philosophy — body copy spans left */
+
+.content-philosophy-text {
+	grid-column: 1 / -1;
+
+	max-width: 64em;
+
+	margin-top: 0.6em;
+	padding-left: 0;
+}
+
+.content-philosophy-text p {
+	max-width: 50em;
+
+	margin: 0 0 1.35em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.02em;
+	line-height: 2;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-charcoal);
+}
+
+.content-philosophy-text p:last-child {
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 736px) {
+
+	.content-philosophy-text {
+		grid-column: 1;
+		margin-top: 0.3em;
+	}
+
+	.content-philosophy-text p {
+		font-size: 0.95em;
+		line-height: 1.95;
+	}
+
+}
+
+
+/* ==========================================================
+   29. MANDARIN TEACHING PAGE
+   Editorial Teaching Portfolio
+   ========================================================== */
+
+.teaching-page {
+	padding: 4em 0 5em;
+}
+
+
+/* ==========================================================
+   TOPLINE
+   ========================================================== */
+
+.teaching-topline {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 5em;
+	padding-bottom: 1em;
+
+	border-bottom: solid 1px var(--angie-line);
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.72em;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+
+	color: var(--angie-grey);
+}
+
+.teaching-topline span:first-child {
+	color: var(--angie-green-dark);
+	font-weight: 600;
+}
+
+
+/* ==========================================================
+   PAGE HEADER
+   ========================================================== */
+
+.teaching-header {
+	width: 100%;
+	margin-bottom: 6.5em;
+}
+
+.teaching-kicker {
+	margin: 0 0 0.8em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.67em;
+	font-weight: 600;
+	letter-spacing: 0.22em;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-header h1 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: clamp(2.35em, 4vw, 3.35em);
+	font-weight: 500;
+	line-height: 1.35;
+	letter-spacing: 0.06em;
+
+	color: var(--angie-charcoal);
+}
+
+.teaching-intro {
+	max-width: 48em;
+
+	margin: 1.6em 0 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.96em;
+	line-height: 2.05;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-grey);
+}
+
+.teaching-title-line {
+	position: relative;
+
+	width: 100%;
+	height: 1px;
+
+	margin-top: 2.3em;
+
+	background: var(--angie-green-soft);
+}
+
+.teaching-title-line::before {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	left: 0;
+
+	width: 4em;
+	height: 3px;
+
+	background: var(--angie-accent);
+}
+
+.teaching-title-line::after {
+	content: "";
+
+	position: absolute;
+	top: -2px;
+	right: 0;
+
+	width: 5px;
+	height: 5px;
+
+	border-radius: 50%;
+
+	background: var(--angie-accent);
+}
+
+
+/* ==========================================================
+   GENERAL SECTION
+   ========================================================== */
+
+.teaching-section {
+	margin-top: 7em;
+}
+
+.teaching-section-heading {
+	display: grid;
+
+	grid-template-columns: 5em minmax(0, 1fr);
+	gap: 1.5em;
+
+	align-items: center;
+
+	margin-bottom: 3em;
+}
+
+.teaching-section-number {
+	margin: 0;
+	padding: 0;
+
+	font-family: "Noto Serif TC", Georgia, serif;
+	font-size: 3.2em;
+	font-weight: 400;
+	line-height: 0.9;
+	letter-spacing: -0.03em;
+
+	color: var(--angie-green-dark);
+}
+
+.teaching-section-heading p {
+	margin: 0 0 0.45em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-section-heading h2 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.75em;
+	font-weight: 500;
+	line-height: 1.45;
+	letter-spacing: 0.05em;
+
+	color: var(--angie-green-dark);
+}
+
+
+/* ==========================================================
+   01 TEACHING APPROACH
+   ========================================================== */
+
+.teaching-approach-grid {
+	display: grid;
+
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+
+	border-top: solid 1px var(--angie-line);
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.teaching-approach-item {
+	position: relative;
+
+	min-width: 0;
+
+	padding: 2.3em 2em 2.5em;
+
+	box-sizing: border-box;
+
+	border-right: solid 1px var(--angie-line);
+}
+
+.teaching-approach-item:last-child {
+	border-right: 0;
+}
+
+.teaching-approach-number {
+	display: block;
+
+	margin-bottom: 1.4em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-approach-item h3 {
+	margin: 0 0 1em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.12em;
+	font-weight: 500;
+	line-height: 1.6;
+	letter-spacing: 0.035em;
+
+	color: var(--angie-green-dark);
+}
+
+.teaching-approach-item h3::after {
+	content: "";
+
+	display: block;
+
+	width: 2.2em;
+	height: 2px;
+
+	margin-top: 0.8em;
+
+	background: var(--angie-accent);
+}
+
+.teaching-approach-item p {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.84em;
+	line-height: 1.95;
+	letter-spacing: 0.02em;
+
+	color: var(--angie-grey);
+}
+
+
+/* ==========================================================
+   02 WHO I TEACH
+   ========================================================== */
+
+.teaching-learner-grid {
+	display: grid;
+
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+
+	border-top: solid 1px var(--angie-line);
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.teaching-learner-item {
+	min-width: 0;
+
+	padding: 2em 1em;
+
+	box-sizing: border-box;
+
+	border-right: solid 1px var(--angie-line);
+
+	text-align: center;
+}
+
+.teaching-learner-item:last-child {
+	border-right: 0;
+}
+
+.teaching-learner-number {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 2.6em;
+	height: 2.6em;
+
+	margin-bottom: 1.2em;
+
+	border-radius: 50%;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.66em;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+
+	color: var(--angie-green-dark);
+
+	background: rgba(202, 198, 189, 0.65);
+}
+
+.teaching-learner-item:nth-child(even)
+.teaching-learner-number {
+	background: rgba(181, 168, 160, 0.58);
+}
+
+.teaching-learner-item h3 {
+	margin: 0 0 0.45em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.95em;
+	font-weight: 500;
+	line-height: 1.5;
+
+	color: var(--angie-green-dark);
+}
+
+.teaching-learner-item p {
+	margin: 0;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.63em;
+	line-height: 1.6;
+
+	color: var(--angie-grey);
+}
+
+
+/* ==========================================================
+   03 TEACHING EXPERIENCE
+   ========================================================== */
+
+.teaching-experience-list {
+	border-top: solid 1px var(--angie-line);
+}
+
+.teaching-experience-item {
+	display: grid;
+
+	grid-template-columns: 4.5em minmax(0, 1fr);
+
+	gap: 2em;
+
+	align-items: start;
+
+	padding: 2.2em 0;
+
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.teaching-experience-number {
+	padding-top: 0.2em;
+
+	font-family: "Noto Serif TC", Georgia, serif;
+	font-size: 1.5em;
+	font-weight: 400;
+	line-height: 1;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-experience-main {
+	min-width: 0;
+}
+
+.teaching-experience-main h3 {
+	margin: 0 0 0.4em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.12em;
+	font-weight: 500;
+	line-height: 1.55;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-green-dark);
+}
+
+.teaching-experience-meta {
+	margin: 0 0 1em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.76em;
+	font-weight: 500;
+	line-height: 1.6;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-experience-description {
+	max-width: 47em;
+
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.86em;
+	line-height: 1.95;
+	letter-spacing: 0.02em;
+
+	color: var(--angie-grey);
+}
+
+
+/* subtle hover */
+
+.teaching-experience-item {
+	transition:
+		padding-left 0.22s ease,
+		background-color 0.22s ease;
+}
+
+.teaching-experience-item:hover {
+	padding-left: 1em;
+
+	background: rgba(202, 198, 189, 0.16);
+}
+
+
+/* ==========================================================
+   04 QUALIFICATION
+   ========================================================== */
+
+.teaching-qualification-card {
+	position: relative;
+
+	display: grid;
+
+	grid-template-columns: 7em minmax(0, 1fr);
+
+	gap: 2.2em;
+
+	align-items: center;
+
+	max-width: 47em;
+
+	padding: 2.5em 2.7em;
+
+	box-sizing: border-box;
+
+	border: solid 1px rgba(151, 157, 110, 0.22);
+
+	background:
+		linear-gradient(
+			135deg,
+			rgba(202, 198, 189, 0.38),
+			rgba(251, 247, 239, 0.72)
+		);
+}
+
+
+/* cut paper corner */
+
+.teaching-qualification-card::after {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	right: -1px;
+
+	width: 1.6em;
+	height: 1.6em;
+
+	background: var(--angie-paper);
+
+	clip-path: polygon(
+		100% 0,
+		100% 100%,
+		0 0
+	);
+}
+
+
+.teaching-qualification-mark {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 4.7em;
+	height: 4.7em;
+
+	box-sizing: border-box;
+
+	border: solid 1px rgba(151, 157, 110, 0.45);
+	border-radius: 50%;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.05em;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+
+	color: var(--angie-green-dark);
+
+	background: rgba(247, 243, 236, 0.65);
+}
+
+.teaching-qualification-label {
+	margin: 0 0 0.7em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.62em;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-qualification-copy h3 {
+	margin: 0 0 0.65em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.2em;
+	font-weight: 500;
+	line-height: 1.55;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-green-dark);
+}
+
+.teaching-qualification-copy > p:last-child {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.82em;
+	line-height: 1.7;
+
+	color: var(--angie-grey);
+}
+
+
+/* ==========================================================
+   05 DIGITAL LEARNING
+   ========================================================== */
+
+.teaching-digital-panel {
+	position: relative;
+
+	display: grid;
+
+	grid-template-columns:
+		minmax(0, 1.4fr)
+		minmax(16em, 0.6fr);
+
+	gap: 3em;
+
+	align-items: center;
+
+	padding: 2.7em 3em;
+
+	box-sizing: border-box;
+
+	border: solid 1px rgba(187, 154, 136, 0.32);
+
+	background:
+		linear-gradient(
+			110deg,
+			rgba(181, 168, 160, 0.22),
+			rgba(202, 198, 189, 0.24)
+		);
+}
+
+
+/* subtle corner decoration */
+
+.teaching-digital-panel::before {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	left: -1px;
+
+	width: 3em;
+	height: 3px;
+
+	background: var(--angie-accent);
+}
+
+.teaching-digital-status {
+	margin: 0 0 0.75em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.62em;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-digital-copy h3 {
+	margin: 0 0 1em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.2em;
+	font-weight: 500;
+	line-height: 1.55;
+	letter-spacing: 0.03em;
+
+	color: var(--angie-green-dark);
+}
+
+.teaching-digital-copy > p:last-child {
+	max-width: 43em;
+
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.84em;
+	line-height: 1.95;
+	letter-spacing: 0.02em;
+
+	color: var(--angie-grey);
+}
+
+
+/* Future topic tags */
+
+.teaching-digital-topics {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+	gap: 0.75em;
+}
+
+.teaching-digital-topics span {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	min-width: 5.5em;
+	min-height: 2.5em;
+
+	padding: 0.35em 0.9em;
+
+	box-sizing: border-box;
+
+	border: solid 1px rgba(151, 157, 110, 0.25);
+	border-radius: 999px;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.72em;
+	font-weight: 500;
+
+	color: var(--angie-green-dark);
+
+	background: rgba(251, 247, 239, 0.72);
+}
+
+
+/* ==========================================================
+   CONTACT CTA
+   ========================================================== */
+
+.teaching-cta {
+	position: relative;
+
+	margin-top: 7em;
+	padding: 2.5em 2.7em;
+
+	border: solid 1px rgba(151, 157, 110, 0.22);
+
+	background:
+		linear-gradient(
+			90deg,
+			rgba(181, 168, 160, 0.28),
+			rgba(247, 243, 236, 0.8)
+		);
+}
+
+.teaching-cta::before {
+	content: "";
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 3px;
+	height: 100%;
+
+	background: var(--angie-accent);
+}
+
+.teaching-cta-kicker {
+	margin: 0 0 0.7em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-cta-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	gap: 3em;
+}
+
+.teaching-cta-row h2 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.35em;
+	font-weight: 500;
+	line-height: 1.6;
+
+	color: var(--angie-charcoal);
+}
+
+.teaching-cta-note {
+	margin: 0.5em 0 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.82em;
+	line-height: 1.7;
+
+	color: var(--angie-grey);
+}
+
+.teaching-cta-row a {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-shrink: 0;
+
+	min-width: 8.5em;
+
+	padding: 0.75em 1.2em;
+
+	box-sizing: border-box;
+
+	border: solid 1px var(--angie-accent);
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.8em;
+	font-weight: 500;
+
+	color: var(--angie-accent-dark);
+
+	background: transparent;
+}
+
+.teaching-cta-row a:hover {
+	background: var(--angie-accent);
+
+	color: var(--angie-charcoal) !important;
+}
+
+
+/* ==========================================================
+   TEACHING PAGE — TABLET
+   ========================================================== */
+
+@media screen and (max-width: 1280px) {
+
+	/* Learner groups: 3 + 2 */
+
+	.teaching-learner-grid {
+		grid-template-columns:
+			repeat(3, minmax(0, 1fr));
+	}
+
+	.teaching-learner-item {
+		border-bottom: solid 1px var(--angie-line);
+	}
+
+	.teaching-learner-item:nth-child(3n) {
+		border-right: 0;
+	}
+
+	.teaching-learner-item:nth-child(4),
+	.teaching-learner-item:nth-child(5) {
+		border-bottom: 0;
+	}
+
+	.teaching-learner-item:nth-child(5) {
+		border-right: 0;
+	}
+
+}
+
+
+@media screen and (max-width: 980px) {
+
+	.teaching-page {
+		padding-top: 3em;
+	}
+
+	.teaching-topline {
+		margin-bottom: 4em;
+	}
+
+	.teaching-header {
+		margin-bottom: 5em;
+	}
+
+	.teaching-section {
+		margin-top: 5.5em;
+	}
+
+
+	/* Approach */
+
+	.teaching-approach-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.teaching-approach-item {
+		border-right: 0;
+		border-bottom: solid 1px var(--angie-line);
+	}
+
+	.teaching-approach-item:last-child {
+		border-bottom: 0;
+	}
+
+
+	/* Qualification */
+
+	.teaching-qualification-card {
+		max-width: 100%;
+	}
+
+
+	/* Digital */
+
+	.teaching-digital-panel {
+		grid-template-columns: 1fr;
+
+		gap: 2em;
+	}
+
+
+	/* CTA */
+
+	.teaching-cta-row {
+		gap: 2em;
+	}
+
+}
+
+
+/* ==========================================================
+   TEACHING PAGE — MOBILE
+   ========================================================== */
+
+@media screen and (max-width: 736px) {
+
+	.teaching-page {
+		padding: 2.5em 0 4em;
+	}
+
+
+	/* Topline */
+
+	.teaching-topline {
+		margin-bottom: 3em;
+
+		font-size: 0.65em;
+	}
+
+	.teaching-topline span:last-child {
+		display: none;
+	}
+
+
+	/* Header */
+
+	.teaching-header h1 {
+		font-size: 2em;
+	}
+
+	.teaching-intro {
+		font-size: 0.9em;
+		line-height: 1.95;
+	}
+
+
+	/* Section heading */
+
+	.teaching-section {
+		margin-top: 4.5em;
+	}
+
+	.teaching-section-heading {
+		grid-template-columns:
+			3.7em
+			minmax(0, 1fr);
+
+		gap: 1em;
+
+		margin-bottom: 2.2em;
+	}
+
+	.teaching-section-number {
+		font-size: 2.4em;
+	}
+
+	.teaching-section-heading h2 {
+		font-size: 1.4em;
+	}
+
+
+	/* Teaching approach */
+
+	.teaching-approach-item {
+		padding:
+			1.8em
+			1.2em
+			2em;
+	}
+
+	.teaching-approach-item h3 {
+		font-size: 1.03em;
+	}
+
+	.teaching-approach-item p {
+		font-size: 0.82em;
+		line-height: 1.9;
+	}
+
+
+	/* Learners */
+
+	.teaching-learner-grid {
+		grid-template-columns:
+			repeat(2, minmax(0, 1fr));
+	}
+
+	.teaching-learner-item {
+		padding: 1.7em 0.8em;
+
+		border-right: solid 1px var(--angie-line);
+		border-bottom: solid 1px var(--angie-line);
+	}
+
+	.teaching-learner-item:nth-child(2n) {
+		border-right: 0;
+	}
+
+	.teaching-learner-item:nth-child(3n) {
+		border-right: solid 1px var(--angie-line);
+	}
+
+	.teaching-learner-item:nth-child(4) {
+		border-right: 0;
+	}
+
+	.teaching-learner-item:nth-child(5) {
+		grid-column: 1 / -1;
+
+		border-right: 0;
+		border-bottom: 0;
+	}
+
+
+	/* Experience */
+
+	.teaching-experience-item {
+		grid-template-columns: 2.8em minmax(0, 1fr);
+
+		gap: 1em;
+
+		padding: 1.8em 0;
+	}
+
+	.teaching-experience-item:hover {
+		padding-left: 0;
+	}
+
+	.teaching-experience-number {
+		font-size: 1.25em;
+	}
+
+	.teaching-experience-main h3 {
+		font-size: 1.03em;
+	}
+
+	.teaching-experience-description {
+		font-size: 0.82em;
+		line-height: 1.9;
+	}
+
+
+	/* Qualification */
+
+	.teaching-qualification-card {
+		display: block;
+
+		padding: 2em 1.4em;
+	}
+
+	.teaching-qualification-mark {
+		width: 4em;
+		height: 4em;
+
+		margin-bottom: 1.5em;
+	}
+
+	.teaching-qualification-copy h3 {
+		font-size: 1.08em;
+	}
+
+
+	/* Digital learning */
+
+	.teaching-digital-panel {
+		padding: 2em 1.4em;
+
+		gap: 1.8em;
+	}
+
+	.teaching-digital-copy h3 {
+		font-size: 1.08em;
+	}
+
+	.teaching-digital-copy > p:last-child {
+		font-size: 0.82em;
+		line-height: 1.9;
+	}
+
+	.teaching-digital-topics {
+		gap: 0.55em;
+	}
+
+	.teaching-digital-topics span {
+		min-width: 0;
+
+		font-size: 0.68em;
+	}
+
+
+	/* CTA */
+
+	.teaching-cta {
+		margin-top: 5em;
+
+		padding:
+			2.1em
+			1.4em;
+	}
+
+	.teaching-cta-row {
+		display: block;
+	}
+
+	.teaching-cta-row h2 {
+		margin-bottom: 0;
+
+		font-size: 1.15em;
+	}
+
+	.teaching-cta-note {
+		margin-bottom: 1.5em;
+	}
+
+	.teaching-cta-row a {
+		min-width: 0;
+	}
+
+}
+
+
+/* ==========================================================
+   30. ILLUSTRATION GALLERY PAGE
+   Minimal Digital Gallery
+   ========================================================== */
+
+.illustration-page {
+	padding: 4em 0 5em;
+}
+
+
+/* ==========================================================
+   PAGE HEADER
+   ========================================================== */
+
+.illustration-header {
+	width: 100%;
+	margin-bottom: 5em;
+}
+
+.illustration-kicker {
+	margin: 0 0 0.8em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.67em;
+	font-weight: 600;
+	letter-spacing: 0.22em;
+
+	color: var(--angie-accent-dark);
+}
+
+.illustration-header h1 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: clamp(2.35em, 4vw, 3.35em);
+	font-weight: 500;
+	line-height: 1.35;
+	letter-spacing: 0.06em;
+
+	color: var(--angie-charcoal);
+}
+
+.illustration-title-line {
+	position: relative;
+
+	width: 100%;
+	height: 1px;
+
+	margin-top: 2.2em;
+
+	background: var(--angie-green-soft);
+}
+
+.illustration-title-line::before {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	left: 0;
+
+	width: 4em;
+	height: 3px;
+
+	background: var(--angie-accent);
+}
+
+.illustration-title-line::after {
+	content: "";
+
+	position: absolute;
+	top: -2px;
+	right: 0;
+
+	width: 5px;
+	height: 5px;
+
+	border-radius: 50%;
+
+	background: var(--angie-accent);
+}
+
+
+/* ==========================================================
+   GALLERY
+   ========================================================== */
+
+.illustration-gallery-section {
+	margin: 0;
+	padding: 0;
+}
+
+.illustration-gallery-label {
+	margin: 0 0 2.5em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.66em;
+	font-weight: 600;
+	letter-spacing: 0.22em;
+
+	color: var(--angie-green-dark);
+}
+
+
+/* Masonry wall */
+
+.illustration-gallery {
+	width: 100%;
+
+	column-count: 3;
+	column-gap: 1.6em;
+
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+
+/* Each artwork */
+
+.illustration-gallery-item {
+	display: inline-block;
+
+	width: 100%;
+
+	margin: 0 0 1.6em;
+	padding: 0;
+
+	break-inside: avoid;
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+
+	vertical-align: top;
+}
+
+
+/* Reset button */
+
+.illustration-gallery-button {
+	display: block;
+
+	width: 100%;
+
+	margin: 0;
+	padding: 0;
+
+	border: 0;
+	border-radius: 0;
+
+	box-shadow: none;
+
+	background: transparent;
+
+	cursor: zoom-in;
+
+	overflow: hidden;
+}
+
+.illustration-gallery-button:hover,
+.illustration-gallery-button:focus {
+	border: 0;
+	box-shadow: none;
+	background: transparent;
+}
+
+
+/* Artwork image */
+
+.illustration-gallery-item img {
+	display: block;
+
+	width: 100%;
+	height: auto;
+
+	margin: 0;
+	padding: 0;
+
+	border: 0;
+
+	object-fit: contain;
+
+	-webkit-user-drag: none;
+	user-select: none;
+
+	transition:
+		transform 0.35s ease,
+		opacity 0.35s ease;
+}
+
+
+/* Very subtle gallery hover */
+
+@media (hover: hover) {
+
+	.illustration-gallery-button:hover img {
+		transform: scale(1.012);
+		opacity: 0.94;
+	}
+
+}
+
+
+/* Keyboard focus */
+
+.illustration-gallery-button:focus-visible {
+	outline: 1px solid var(--angie-accent);
+	outline-offset: 5px;
+}
+
+
+/* ==========================================================
+   COPYRIGHT
+   ========================================================== */
+
+.illustration-copyright {
+	max-width: 56em;
+
+	margin: 5.5em auto 0;
+	padding-top: 2em;
+
+	border-top: solid 1px var(--angie-line);
+
+	text-align: center;
+}
+
+.illustration-copyright p {
+	margin: 0 0 0.45em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.67em;
+	line-height: 1.8;
+	letter-spacing: 0.02em;
+
+	color: var(--angie-grey);
+}
+
+.illustration-copyright p:first-child {
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	letter-spacing: 0.04em;
+
+	color: var(--angie-green-dark);
+}
+
+
+/* ==========================================================
+   CONTACT CTA
+   ========================================================== */
+
+.illustration-cta {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	gap: 3em;
+
+	margin-top: 5em;
+	padding: 2.4em 2.6em;
+
+	border: solid 1px rgba(151, 157, 110, 0.18);
+
+	background: rgba(251, 247, 239, 0.5);
+}
+
+.illustration-cta h2 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.25em;
+	font-weight: 500;
+	line-height: 1.6;
+	letter-spacing: 0.02em;
+
+	color: var(--angie-charcoal);
+}
+
+.illustration-cta p {
+	margin: 0.55em 0 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.8em;
+	line-height: 1.75;
+
+	color: var(--angie-grey);
+}
+
+.illustration-cta > a {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-shrink: 0;
+
+	min-width: 8em;
+
+	padding: 0.75em 1.2em;
+
+	border: solid 1px var(--angie-accent);
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.8em;
+	font-weight: 500;
+
+	color: var(--angie-accent-dark);
+
+	background: transparent;
+}
+
+.illustration-cta > a:hover {
+	background: var(--angie-accent);
+
+	color: var(--angie-charcoal) !important;
+}
+
+
+/* ==========================================================
+   LIGHTBOX
+   ========================================================== */
+
+.illustration-lightbox {
+	position: fixed;
+	z-index: 10000;
+
+	inset: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 2.5em;
+
+	box-sizing: border-box;
+
+	background: rgba(20, 22, 20, 0.94);
+
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+
+	transition:
+		opacity 0.25s ease,
+		visibility 0.25s ease;
+
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.illustration-lightbox.is-open {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+
+/* Lock page while viewing */
+
+body.illustration-lightbox-open {
+	overflow: hidden;
+}
+
+
+/* Inner lightbox */
+
+.illustration-lightbox-inner {
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+
+	max-width: 100%;
+	max-height: 100%;
+}
+
+
+/* Image area */
+
+.illustration-lightbox-image-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+
+	padding: 2em 5em;
+
+	box-sizing: border-box;
+}
+
+.illustration-lightbox-image-wrap img {
+	display: block;
+
+	width: auto;
+	height: auto;
+
+	max-width: 90vw;
+	max-height: 88vh;
+
+	margin: 0;
+
+	border: 0;
+
+	object-fit: contain;
+
+	box-shadow:
+		0 1.2em 3em rgba(0, 0, 0, 0.22);
+
+	-webkit-user-drag: none;
+	user-select: none;
+}
+
+
+/* ==========================================================
+   LIGHTBOX CONTROLS
+   ========================================================== */
+
+.illustration-lightbox-close,
+.illustration-lightbox-prev,
+.illustration-lightbox-next {
+	position: absolute;
+	z-index: 3;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin: 0;
+	padding: 0;
+
+	border: 0;
+	border-radius: 0;
+
+	box-shadow: none;
+
+	background: transparent;
+
+	color: rgba(255, 255, 255, 0.82);
+
+	cursor: pointer;
+
+	transition:
+		color 0.2s ease,
+		opacity 0.2s ease,
+		transform 0.2s ease;
+}
+
+.illustration-lightbox-close:hover,
+.illustration-lightbox-prev:hover,
+.illustration-lightbox-next:hover {
+	border: 0;
+
+	background: transparent;
+
+	color: #ffffff !important;
+}
+
+
+/* Close */
+
+.illustration-lightbox-close {
+	top: 0.15em;
+	right: 0.15em;
+
+	width: 2em;
+	height: 2em;
+
+	font-family: Arial, sans-serif;
+	font-size: 2em;
+	font-weight: 300;
+	line-height: 1;
+}
+
+
+/* Previous / next */
+
+.illustration-lightbox-prev,
+.illustration-lightbox-next {
+	top: 50%;
+
+	width: 2em;
+	height: 3em;
+
+	transform: translateY(-50%);
+
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 2.4em;
+	font-weight: 300;
+	line-height: 1;
+}
+
+.illustration-lightbox-prev {
+	left: 0.2em;
+}
+
+.illustration-lightbox-next {
+	right: 0.2em;
+}
+
+.illustration-lightbox-prev:hover {
+	transform:
+		translateY(-50%)
+		translateX(-3px);
+}
+
+.illustration-lightbox-next:hover {
+	transform:
+		translateY(-50%)
+		translateX(3px);
+}
+
+
+/* Remove template button effects */
+
+.illustration-lightbox button:focus,
+.illustration-lightbox button:hover,
+.illustration-gallery-button:focus,
+.illustration-gallery-button:hover {
+	box-shadow: none;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media screen and (max-width: 980px) {
+
+	.illustration-page {
+		padding-top: 3em;
+	}
+
+	.illustration-header {
+		margin-bottom: 4em;
+	}
+
+	.illustration-gallery {
+		column-count: 2;
+		column-gap: 1.35em;
+	}
+
+	.illustration-gallery-item {
+		margin-bottom: 1.35em;
+	}
+
+	.illustration-lightbox {
+		padding: 1.5em;
+	}
+
+	.illustration-lightbox-image-wrap {
+		padding: 3em 3.5em;
+	}
+
+	.illustration-lightbox-image-wrap img {
+		max-width: 88vw;
+		max-height: 86vh;
+	}
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media screen and (max-width: 736px) {
+
+	.illustration-page {
+		padding: 2.5em 0 4em;
+	}
+
+
+	/* Header */
+
+	.illustration-header {
+		margin-bottom: 3.5em;
+	}
+
+	.illustration-header h1 {
+		font-size: 2em;
+	}
+
+
+	/* Gallery */
+
+	.illustration-gallery-label {
+		margin-bottom: 1.8em;
+	}
+
+	.illustration-gallery {
+		column-count: 1;
+		column-gap: 0;
+	}
+
+	.illustration-gallery-item {
+		margin-bottom: 1.5em;
+	}
+
+
+	/* Copyright */
+
+	.illustration-copyright {
+		margin-top: 4em;
+		padding-top: 1.7em;
+
+		text-align: left;
+	}
+
+	.illustration-copyright p {
+		font-size: 0.64em;
+	}
+
+
+	/* CTA */
+
+	.illustration-cta {
+		display: block;
+
+		margin-top: 4em;
+
+		padding: 2em 1.4em;
+	}
+
+	.illustration-cta h2 {
+		font-size: 1.1em;
+	}
+
+	.illustration-cta p {
+		margin-bottom: 1.5em;
+	}
+
+	.illustration-cta > a {
+		min-width: 0;
+	}
+
+
+	/* Lightbox */
+
+	.illustration-lightbox {
+		padding: 0.75em;
+	}
+
+	.illustration-lightbox-image-wrap {
+		padding:
+			3.5em
+			2.6em;
+	}
+
+	.illustration-lightbox-image-wrap img {
+		max-width: 92vw;
+		max-height: 82vh;
+
+		box-shadow: none;
+	}
+
+
+	/* Lightbox close */
+
+	.illustration-lightbox-close {
+		top: 0.15em;
+		right: 0.1em;
+
+		font-size: 1.8em;
+	}
+
+
+	/* Lightbox arrows */
+
+	.illustration-lightbox-prev,
+	.illustration-lightbox-next {
+		width: 1.4em;
+
+		font-size: 2em;
+	}
+
+	.illustration-lightbox-prev {
+		left: -0.1em;
+	}
+
+	.illustration-lightbox-next {
+		right: -0.1em;
+	}
+
+}
+
+
+/* ==========================================================
+   ILLUSTRATION GALLERY — BUTTON FIX
+   ========================================================== */
+
+.illustration-gallery-button {
+	display: block !important;
+	width: 100% !important;
+	height: auto !important;
+	min-height: 0 !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+
+	line-height: 0 !important;
+
+	border: 0 !important;
+	border-radius: 0 !important;
+
+	box-shadow: none !important;
+	background: transparent !important;
+
+	overflow: visible !important;
+
+	cursor: zoom-in;
+}
+
+.illustration-gallery-button img {
+	display: block !important;
+
+	width: 100% !important;
+	height: auto !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+
+	line-height: 0 !important;
+
+	border: 0 !important;
+}
+
+
+/* ==========================================================
+   GLOBAL CHINESE TYPE — SAME AS 劉泀嗪
+   ========================================================== */
+
+/* Base Chinese typography */
+body {
+	font-family: var(--angie-font-zh);
+}
+
+/* Chinese headings and body copy */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+	font-family: var(--angie-font-zh);
+}
+
+
+/* Preserve the handwritten Angie logo */
+.name-en,
+.sidebar-name-en {
+	font-family: "Allura", cursive !important;
+}
+
+
+/* Content Philosophy — Chinese only */
+.content-philosophy-heading h2,
+.content-philosophy-quote-zh,
+.content-philosophy-text p,
+.content-philosophy-copy p {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* Homepage Chinese */
+.home-name .name-zh,
+.home-eyebrow,
+.home-disciplines,
+.home-intro p,
+.home-section-heading h2,
+.practice-title h3,
+.practice-description,
+.explore-editorial-item h3,
+.explore-description {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* About Chinese */
+.about-rail-zh,
+.about-essay-header h1,
+.about-essay-body p,
+.about-margin-section h2,
+.about-location,
+.about-language-list,
+.about-margin-quote p,
+.about-cta-copy h2 {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* Experience Chinese */
+.experience-header h1,
+.experience-subtitle,
+.experience-section-heading h2,
+.experience-skill-card h3,
+.experience-skill-card li,
+.education-timeline-content h3,
+.education-timeline-content p {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* Writing / Literature Chinese */
+.writing-header h1,
+.writing-intro,
+.writing-section-heading h2,
+.writing-work-main h3,
+.writing-work-meta,
+.writing-award-name,
+.writing-research-main h3,
+.writing-research-meta,
+.writing-theme-list span,
+.literary-work-header h1,
+.literary-work-source,
+.literary-work-body {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* Content Strategy Chinese */
+.content-header h1,
+.content-intro,
+.content-section-heading h2,
+.content-project-card h3,
+.content-project-skills,
+.content-project-description,
+.content-project-tags span,
+.content-independent-copy h3,
+.content-independent-copy > p,
+.content-capability-item h3,
+.content-cta-row h2,
+.content-cta-note {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* Teaching Chinese */
+.teaching-header h1,
+.teaching-intro,
+.teaching-section-heading h2,
+.teaching-approach-item h3,
+.teaching-approach-item p,
+.teaching-learner-item h3,
+.teaching-experience-main h3,
+.teaching-experience-meta,
+.teaching-experience-description,
+.teaching-qualification-mark,
+.teaching-qualification-copy h3,
+.teaching-qualification-copy p,
+.teaching-digital-copy h3,
+.teaching-digital-copy p,
+.teaching-digital-topics span,
+.teaching-cta-row h2,
+.teaching-cta-note {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* Illustration Chinese */
+.illustration-header h1,
+.illustration-copyright p,
+.illustration-cta h2,
+.illustration-cta p {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* Contact Chinese */
+.contact-header h1,
+.contact-lead,
+.contact-intro,
+.contact-primary-main h2,
+.contact-email-note,
+.contact-meta-item,
+.contact-section-heading h2,
+.contact-collaboration-item h3,
+.contact-collaboration-item p {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* =========================================================
+   HOMEPAGE — THIN CRINKLED CHAMPAGNE GOLD FOIL BORDER
+   首頁互動式皺褶香檳金箔邊
+   ========================================================= */
+
+.practice-editorial-item,
+.explore-editorial-item {
+  position: relative;
+  isolation: isolate;
+}
+
+
+/* 金箔細邊 */
+.practice-editorial-item::after,
+.explore-editorial-item::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: 10;
+
+  /* 邊框厚度 */
+  padding: 2px;
+
+  pointer-events: none;
+  opacity: 0;
+
+  /* 模擬皺褶金箔：細碎明暗 + 香檳金底 */
+  background:
+    repeating-linear-gradient(
+      112deg,
+      rgba(255, 243, 179, 0.50) 0px,
+      rgba(255, 243, 179, 0.50) 1px,
+      rgba(207, 177, 79, 0.22) 2px,
+      rgba(238, 223, 154, 0.42) 3px,
+      rgba(210, 180, 94, 0.18) 5px,
+      rgba(255, 243, 179, 0.34) 7px
+    ),
+    linear-gradient(
+  128deg,
+  #B88A2E 0%,
+  #D6B65C 18%,
+  #F8E7A1 35%,
+  #FFF3C4 48%,
+  #D4AF37 62%,
+  #E8C96A 80%,
+  #B88A2E 100%
+);
+
+  background-size:
+    19px 19px,
+    220% 220%;
+
+  /* 中間挖空，只留下 1px 外框 */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  filter:
+  saturate(1.15)
+  brightness(1.05);
+
+  transition:
+    opacity 0.28s ease,
+    background-position 0.55s ease;
+}
+
+
+/* 滑鼠移入 */
+.practice-editorial-item:hover::after,
+.practice-editorial-item:focus-visible::after,
+.explore-editorial-item:hover::after,
+.explore-editorial-item:focus-visible::after {
+  opacity: 0.88;
+
+  background-position:
+    5px 3px,
+    100% 50%;
+}
+
+
+/* 點擊瞬間稍微亮一點 */
+.practice-editorial-item:active::after,
+.explore-editorial-item:active::after {
+  opacity: 1;
+
+}
+
+
+/* =========================================================
+   ANGIE — FOUNTAIN PEN NIB CURSOR
+   簡約鋼筆筆尖 + 小型濺墨
+   ========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+  html.angie-pen-cursor,
+  html.angie-pen-cursor body,
+  html.angie-pen-cursor a,
+  html.angie-pen-cursor button,
+  html.angie-pen-cursor input,
+  html.angie-pen-cursor textarea,
+  html.angie-pen-cursor select,
+  html.angie-pen-cursor label {
+    cursor: none !important;
+  }
+
+
+  /* =========================
+     鋼筆筆尖
+     ========================= */
+
+  .angie-pen-nib {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 28px;
+    height: 28px;
+
+    z-index: 9999999;
+    pointer-events: none;
+
+    opacity: 0;
+
+    transform: translate3d(-100px, -100px, 0);
+
+    transition:
+      opacity 0.16s ease,
+      filter 0.16s ease;
+
+    will-change: transform;
+  }
+
+  .angie-pen-nib svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+
+    filter:
+      drop-shadow(
+        1px 2px 1.5px
+        rgba(139, 111, 85, 0.16)
+      );
+  }
+
+  .angie-pen-nib.is-link {
+    filter:
+      brightness(1.05)
+      saturate(1.04);
+  }
+
+
+  /* =========================
+     落下來的墨滴
+     ========================= */
+
+  .angie-ink-drop {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 6px;
+
+    z-index: 9999998;
+    pointer-events: none;
+
+    border-radius: 50% 50% 62% 62%;
+
+    background:
+      linear-gradient(
+        180deg,
+        #918a78 0%,
+        #a79f8b 52%,
+        #b5a8a0 100%
+      );
+
+    opacity: 0;
+
+    transform-origin: center top;
+
+    animation:
+      angieInkFall 1.8s ease-in forwards;
+  }
+
+
+  /* =========================
+     落地中央的小墨花
+     ========================= */
+
+  .angie-ink-drop::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 29px;
+
+    width: 18px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+    radial-gradient(
+      ellipse at center,
+      rgba(151, 143, 125, 0.62) 0%,
+      rgba(167, 159, 139, 0.42) 42%,
+      rgba(184, 173, 165, 0.18) 70%,
+      rgba(184, 173, 165, 0) 84%
+    );
+
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      scale(0.15);
+
+    animation:
+      angieInkSplashBase 1.8s ease-out forwards;
+  }
+
+
+  /* =========================
+     四周濺起的小墨珠
+     ========================= */
+
+  .angie-ink-drop::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 29px;
+
+  width: 2.5px;
+  height: 2.5px;
+
+  border-radius: 50%;
+
+  background: #a79f8b;
+
+  opacity: 0;
+
+  transform:
+    translateX(-50%)
+    scale(0.2);
+
+  box-shadow:
+    -11px -3px 0 rgba(151, 144, 125, 0.68),
+    -7px -8px 0 rgba(167, 159, 139, 0.58),
+    -3px -6px 0 rgba(184, 173, 165, 0.62),
+
+     4px -7px 0 rgba(151, 144, 125, 0.60),
+     8px -9px 0 rgba(167, 159, 139, 0.54),
+    12px -3px 0 rgba(184, 173, 165, 0.58);
+
+  animation:
+    angieInkSplashDrops 1.8s ease-out forwards;
+}
+
+
+  /* 墨滴落下 */
+  @keyframes angieInkFall {
+
+  0% {
+    opacity: 0;
+    transform:
+      translateY(0)
+      scale(0.72);
+  }
+
+  8% {
+    opacity: 0.82;
+    transform:
+      translateY(1px)
+      scale(0.9);
+  }
+
+  55% {
+    opacity: 0.8;
+    transform:
+      translateY(14px)
+      scale(1);
+  }
+
+  72% {
+    opacity: 0.78;
+    transform:
+      translateY(23px)
+      scale(1.02);
+  }
+
+  82% {
+    opacity: 0;
+    transform:
+      translateY(29px)
+      scale(0.82);
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translateY(29px)
+      scale(0.82);
+  }
+}
+
+
+  /* 中央濺開 */
+  @keyframes angieInkSplashBase {
+
+  0%,
+  70% {
+    opacity: 0;
+    transform:
+      translateX(-50%)
+      scale(0.15);
+  }
+
+  78% {
+    opacity: 0.64;
+    transform:
+      translateX(-50%)
+      scale(0.58);
+  }
+
+  86% {
+    opacity: 0.54;
+    transform:
+      translateX(-50%)
+      scale(1);
+  }
+
+  94% {
+    opacity: 0.26;
+    transform:
+      translateX(-50%)
+      scale(1.12);
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translateX(-50%)
+      scale(1.18);
+  }
+}
+
+
+  /* 小水花往外濺 */
+  @keyframes angieInkSplashDrops {
+
+  0%,
+  70% {
+    opacity: 0;
+    transform:
+      translateX(-50%)
+      translateY(0)
+      scale(0.15);
+  }
+
+  78% {
+    opacity: 0.76;
+    transform:
+      translateX(-50%)
+      translateY(-1px)
+      scale(0.68);
+  }
+
+  86% {
+    opacity: 0.62;
+    transform:
+      translateX(-50%)
+      translateY(-4px)
+      scale(1);
+  }
+
+  94% {
+    opacity: 0.24;
+    transform:
+      translateX(-50%)
+      translateY(-6px)
+      scale(1.08);
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translateX(-50%)
+      translateY(-7px)
+      scale(1.1);
+  }
+}
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  .angie-ink-drop {
+    display: none !important;
+  }
+
+}
